@@ -3,7 +3,7 @@ site_tagline: "Daily notes in plain text."
 site_url: "journal.rohitfarmer.com"
 
 # Where the year folders live (relative to this config)
-content_root: "."
+content_root: "entries"
 
 # Where to write the generated HTML (relative to this config)
 output_dir: "_site"
@@ -19,3 +19,10 @@ order: "reverse"
 # Whether to make the latest year the index.html
 latest_as_index: true
 
+extra_head: |
+    <meta name="author" content="Rohit Farmer">
+    <meta name="robots" content="noindex">
+
+extra_footer: |
+    <p>© 2025 Rohit Farmer — All rights reserved.</p>
+    <p><a href="mailto:me@example.com">Contact</a></p>

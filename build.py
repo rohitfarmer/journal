@@ -8,12 +8,13 @@ from pathlib import Path
 from datetime import datetime
 from email.utils import formatdate
 
-import markdown       # pip install markdown
-import yaml           # pip install pyyaml
-from bs4 import BeautifulSoup  # pip install beautifulsoup4
+
+import markdown       
+import yaml           
+from bs4 import BeautifulSoup  
 
 BASE_DIR = Path(__file__).parent
-CONFIG_FILE = BASE_DIR / "config.yml"
+CONFIG_FILE = BASE_DIR / "config.yaml"
 
 # Matches lines like "## 2025-01-02" or "### 2025-01-02"
 ENTRY_HEADING_RE = re.compile(r"^(#{2,6})\s+(\d{4}-\d{2}-\d{2})\s*$")
@@ -27,18 +28,39 @@ def load_config():
 
     data = yaml.safe_load(CONFIG_FILE.read_text(encoding="utf-8")) or {}
 
+    extra_head = data.get("extra_head", [])
+    # Normalize: allow string or list
+    if isinstance(extra_head, str):
+        extra_head_list = [extra_head]
+    elif isinstance(extra_head, list):
+        # Ensure all elements are strings
+        extra_head_list = [str(x) for x in extra_head]
+    else:
+        extra_head_list = []
+    
+    # extra_footer
+    extra_footer = data.get("extra_footer", [])
+    if isinstance(extra_footer, str):
+        extra_footer_list = [extra_footer]
+    elif isinstance(extra_footer, list):
+        extra_footer_list = [str(x) for x in extra_footer]
+    else:
+        extra_footer_list = []
+
     cfg = {
         "site_title": data.get("site_title", "Journal"),
         "site_tagline": data.get("site_tagline", ""),
-        "site_url": data.get("site_url", ""),          # optional, for RSS
+        "site_url": data.get("site_url", ""),
         "content_root": data.get("content_root", "."),
         "output_dir": data.get("output_dir", "_site"),
         "css_path": data.get("css_path", "style.css"),
-        # default to newest first
-        "order": data.get("order", "reverse"),         # "reverse" or "chronological"
+        "order": data.get("order", "reverse"),  # "reverse" or "chronological"
         "latest_as_index": bool(data.get("latest_as_index", True)),
+        "extra_head": extra_head_list,
+        "extra_footer": extra_footer_list,
     }
     return cfg
+
 
 
 def parse_month_file(path: Path):
@@ -220,6 +242,19 @@ def render_year_page(year, years, entries, cfg, *, is_index=False):
 
     years_nav_html = "\n          ".join(year_links)
 
+    # Build extra <head> HTML from config
+    extra_head_html = ""
+    extra_head_items = cfg.get("extra_head") or []
+    if extra_head_items:
+        # Indent nicely for readability
+        extra_head_html = "\n  " + "\n  ".join(extra_head_items)
+
+    # Build extra footer HTML from config
+    extra_footer_items = cfg.get("extra_footer") or []
+    extra_footer_html = ""
+    if extra_footer_items:
+        extra_footer_html = "\n    " + "\n    ".join(extra_footer_items)
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -228,6 +263,7 @@ def render_year_page(year, years, entries, cfg, *, is_index=False):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
   <link rel="alternate" type="application/rss+xml" title="{site_title} – RSS" href="rss.xml">
+  {extra_head_html}
 </head>
 <body>
 <div class="layout">
@@ -255,6 +291,9 @@ def render_year_page(year, years, entries, cfg, *, is_index=False):
     </div>
   </main>
 </div>
+    <footer class="site-footer">
+        {extra_footer_html}
+    </footer>
 </body>
 </html>
 """
