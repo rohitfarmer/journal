@@ -4,6 +4,7 @@ import sys
 import shutil
 import html
 import time
+import json
 from pathlib import Path
 from datetime import datetime
 from email.utils import formatdate
@@ -13,7 +14,7 @@ import yaml           # pip install pyyaml
 from bs4 import BeautifulSoup  # pip install beautifulsoup4
 
 BASE_DIR = Path(__file__).parent
-CONFIG_FILE = BASE_DIR / "config.yaml"
+CONFIG_FILE = BASE_DIR / "config.yml"
 
 # Matches lines like "## 2025-01-02" or "### 2025-01-02"
 ENTRY_HEADING_RE = re.compile(r"^(#{2,6})\s+(\d{4}-\d{2}-\d{2})\s*$")
@@ -48,7 +49,7 @@ def load_config():
     cfg = {
         "site_title": data.get("site_title", "Journal"),
         "site_tagline": data.get("site_tagline", ""),
-        "site_url": data.get("site_url", ""),          # optional, for RSS
+        "site_url": data.get("site_url", ""),          # optional, for RSS + absolute links
         "content_root": data.get("content_root", "."),
         "output_dir": data.get("output_dir", "_site"),
         "css_path": data.get("css_path", "style.css"),
@@ -57,6 +58,11 @@ def load_config():
         "latest_as_index": bool(data.get("latest_as_index", True)),
         "extra_head": extra_head_list,
         "extra_footer": extra_footer_list,
+        # Search config
+        "enable_search": bool(data.get("enable_search", True)),
+        "lunr_js_path": data.get("lunr_js_path", "lunr.min.js"),
+        "search_js_path": data.get("search_js_path", "search.js"),
+        "search_index_filename": data.get("search_index_filename", "search_index.json"),
     }
     return cfg
 
@@ -252,6 +258,29 @@ def render_year_page(year, years, entries, cfg, *, is_index=False):
     if extra_footer_items:
         extra_footer_html = "\n    " + "\n    ".join(extra_footer_items)
 
+    # Search UI (only if enabled)
+    search_html = ""
+    if cfg.get("enable_search", True):
+        search_html = """
+      <section class="search-section">
+        <form class="search-form" role="search" onsubmit="return false;">
+          <label for="search-input" class="search-label">Search entries</label>
+          <input id="search-input" class="search-input" type="search" placeholder="Search this journal">
+        </form>
+        <div id="search-results" class="search-results" aria-live="polite"></div>
+      </section>
+"""
+
+    # Scripts for search (lunr + search.js)
+    search_scripts_html = ""
+    if cfg.get("enable_search", True):
+        lunr_basename = Path(cfg["lunr_js_path"]).name
+        search_basename = Path(cfg["search_js_path"]).name
+        search_scripts_html = (
+            f'\n<script src="{lunr_basename}"></script>\n'
+            f'<script src="{search_basename}"></script>'
+        )
+
     order_text = (
         "reverse chronological" if cfg.get("order", "reverse") == "reverse" else "chronological"
     )
@@ -266,12 +295,22 @@ def render_year_page(year, years, entries, cfg, *, is_index=False):
   <link rel="alternate" type="application/rss+xml" title="{site_title} – RSS" href="rss.xml">{extra_head_html}
 </head>
 <body>
+<input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox" aria-label="Toggle dark mode">
 <div class="layout">
   <aside class="sidebar">
     <header class="site-header">
       <h1 class="site-title"><a href="index.html">{site_title}</a></h1>
       <p class="site-tagline">{site_tagline}</p>
     </header>
+
+    <div class="theme-toggle-control">
+      <label for="theme-toggle" class="theme-toggle-label">
+        <span class="theme-toggle-icon theme-toggle-light" aria-hidden="true">☀️</span>
+        <span class="theme-toggle-icon theme-toggle-dark" aria-hidden="true">🌙</span>
+        <span class="theme-toggle-text">Theme</span>
+      </label>
+    </div>
+
     <nav class="year-nav">
       <h2 class="year-nav-title">Years</h2>
       <ul class="year-nav-list">
@@ -287,6 +326,7 @@ def render_year_page(year, years, entries, cfg, *, is_index=False):
         <p class="content-subtitle">Entries are shown in {order_text} order.</p>
       </header>
 
+{search_html}
       {articles_html}
     </div>
   </main>
@@ -294,7 +334,7 @@ def render_year_page(year, years, entries, cfg, *, is_index=False):
 
 <footer class="site-footer">
   {extra_footer_html}
-</footer>
+</footer>{search_scripts_html}
 
 </body>
 </html>
@@ -311,11 +351,26 @@ def copy_css(css_src: Path, output_dir: Path):
     print(f"Copied CSS to {dest}")
 
 
+def copy_search_js(cfg, output_dir: Path):
+    """Copy Lunr.js and search.js into the output directory (if enabled)."""
+    if not cfg.get("enable_search", True):
+        return
+
+    for key in ("lunr_js_path", "search_js_path"):
+        src = (BASE_DIR / cfg[key]).resolve()
+        if not src.exists():
+            print(f"WARNING: Search JS file not found at {src}", file=sys.stderr)
+            continue
+        dest = output_dir / src.name
+        shutil.copy2(src, dest)
+        print(f"Copied {src.name} to {dest}")
+
+
 def generate_rss(latest_year: str, entries, cfg: dict, output_dir: Path):
     """
     Generate an RSS 2.0 feed for the latest year and write _site/rss.xml.
 
-    IMPORTANT: description now contains rendered HTML (not Markdown),
+    description contains rendered HTML (not Markdown),
     wrapped in CDATA so RSS readers can display it properly.
     """
     site_title = cfg["site_title"]
@@ -344,7 +399,7 @@ def generate_rss(latest_year: str, entries, cfg: dict, output_dir: Path):
 
         title = f"{date_str} – {site_title}"
 
-        # Render full entry HTML for RSS (like the page body, but without <article>)
+        # Render full entry HTML for RSS (body only)
         entry_html = wrap_images_with_figures(
             markdown.markdown(e["content_md"])
         )
@@ -377,6 +432,48 @@ def generate_rss(latest_year: str, entries, cfg: dict, output_dir: Path):
     print(f"Wrote {rss_path}")
 
 
+def build_search_index(entries_by_year: dict, cfg: dict, output_dir: Path):
+    """
+    Build a Lunr-friendly JSON search index over all years.
+    """
+    if not cfg.get("enable_search", True):
+        return
+
+    site_url = (cfg.get("site_url") or "").rstrip("/")
+
+    docs = []
+
+    for year, entries in entries_by_year.items():
+        for e in entries:
+            date_str = e["date"]
+            # Entry URL (relative)
+            url = f"{year}.html#{date_str}"
+            if site_url:
+                full_url = f"{site_url}/{url}"
+            else:
+                full_url = url
+
+            # Convert markdown -> HTML -> plain text
+            html_body = markdown.markdown(e["content_md"])
+            text = BeautifulSoup(html_body, "html.parser").get_text(" ", strip=True)
+
+            docs.append(
+                {
+                    "id": f"{year}-{date_str}",
+                    "year": year,
+                    "date": date_str,
+                    "url": url,
+                    "full_url": full_url,
+                    "title": f"{date_str}",
+                    "text": text,
+                }
+            )
+
+    index_path = output_dir / cfg["search_index_filename"]
+    index_path.write_text(json.dumps(docs, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"Wrote search index to {index_path}")
+
+
 def main():
     cfg = load_config()
 
@@ -400,6 +497,9 @@ def main():
 
     # Copy CSS
     copy_css(css_src, output_dir)
+
+    # Copy search JS files (if enabled)
+    copy_search_js(cfg, output_dir)
 
     # Per-year pages
     for year in years:
@@ -429,6 +529,9 @@ def main():
 
     # RSS for latest year
     generate_rss(latest_year, entries_by_year[latest_year], cfg, output_dir)
+
+    # Lunr search index
+    build_search_index(entries_by_year, cfg, output_dir)
 
 
 if __name__ == "__main__":

@@ -11,12 +11,22 @@
 
 </head>
 <body>
+<input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox" aria-label="Toggle dark mode">
 <div class="layout">
   <aside class="sidebar">
     <header class="site-header">
       <h1 class="site-title"><a href="index.html">Rohit's Journal</a></h1>
       <p class="site-tagline">Welcome to my online journal. The entries here are longer than a tweet, but smaller and less structured than a blog post. You can also follow my journal via <a href="https://journal.rohitfarmer.com/rss.xml">RSS</a>.</p>
     </header>
+
+    <div class="theme-toggle-control">
+      <label for="theme-toggle" class="theme-toggle-label">
+        <span class="theme-toggle-icon theme-toggle-light" aria-hidden="true">☀️</span>
+        <span class="theme-toggle-icon theme-toggle-dark" aria-hidden="true">🌙</span>
+        <span class="theme-toggle-text">Theme</span>
+      </label>
+    </div>
+
     <nav class="year-nav">
       <h2 class="year-nav-title">Years</h2>
       <ul class="year-nav-list">
@@ -32,6 +42,15 @@
         <h2 class="year-title">Latest entries &ndash; 2025</h2>
         <p class="content-subtitle">Entries are shown in reverse chronological order.</p>
       </header>
+
+
+      <section class="search-section">
+        <form class="search-form" role="search" onsubmit="return false;">
+          <label for="search-input" class="search-label">Search entries</label>
+          <input id="search-input" class="search-input" type="search" placeholder="Search this journal">
+        </form>
+        <div id="search-results" class="search-results" aria-live="polite"></div>
+      </section>
 
       <article id="2025-12-31" class="entry">
   <header class="entry-header">
@@ -373,9 +392,11 @@
 <footer class="site-footer">
   
     <p>© 2025 Rohit Farmer — All rights reserved.</p>
-<p><a href="mailto:me@example.com">Contact</a></p>
+<p><a href="mailto:rohit@rohitfarmer.com">Contact</a></p>
 
 </footer>
+<script src="lunr.js"></script>
+<script src="search.js"></script>
 
 </body>
 </html>

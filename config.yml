@@ -26,3 +26,9 @@ extra_head: |
 extra_footer: |
     <p>© 2025 Rohit Farmer — All rights reserved.</p>
     <p><a href="mailto:rohit@rohitfarmer.com">Contact</a></p>
+
+enable_search: true
+lunr_js_path: "lunr.js"
+search_js_path: "search.js"
+search_index_filename: "search_index.json"
+

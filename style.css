@@ -323,3 +323,160 @@ a:hover {
 .site-footer a:hover {
   text-decoration: underline;
 }
+
+/* Dark mode toggle – CSS-only */
+
+.theme-toggle-checkbox {
+  position: absolute;
+  left: -9999px;
+}
+
+.theme-toggle-control {
+  margin-bottom: 1.5rem;
+}
+
+.theme-toggle-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: 1px solid #4b5563;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+.theme-toggle-icon {
+  font-size: 1rem;
+}
+
+.theme-toggle-text {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+
+/* Base light theme is what you already have.
+   Dark theme overrides when checkbox is checked. */
+
+#theme-toggle:checked ~ .layout {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+#theme-toggle:checked ~ .layout .sidebar {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+#theme-toggle:checked ~ .layout .site-tagline {
+  color: #9ca3af;
+}
+
+#theme-toggle:checked ~ .layout .year-link {
+  color: #e5e7eb;
+}
+
+#theme-toggle:checked ~ .layout .year-link.active {
+  background: #4b5563;
+}
+
+#theme-toggle:checked ~ .layout .content {
+  background: #020617;
+}
+
+#theme-toggle:checked ~ .layout .entry {
+  background: #020617;
+  border-color: #1f2937;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+#theme-toggle:checked ~ .layout .entry-date {
+  color: #e5e7eb;
+}
+
+#theme-toggle:checked ~ .layout .entry-body code {
+  background: #111827;
+}
+
+#theme-toggle:checked ~ .layout .entry-body pre {
+  background: #020617;
+}
+
+#theme-toggle:checked ~ .layout .site-footer {
+  color: #9ca3af;
+}
+
+/* Search */
+
+.search-section {
+  margin: 1rem 0 1.5rem;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.search-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.search-input {
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.4);
+}
+
+.search-results {
+  margin-top: 0.7rem;
+}
+
+.search-results-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-result {
+  padding: 0.4rem 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.search-result-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.search-result-snippet {
+  margin: 0.15rem 0 0;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+/* Dark theme tweaks for search */
+
+#theme-toggle:checked ~ .layout .search-input {
+  background: #020617;
+  color: #e5e7eb;
+  border-color: #374151;
+}
+
+#theme-toggle:checked ~ .layout .search-result {
+  border-top-color: #1f2937;
+}
+
+#theme-toggle:checked ~ .layout .search-result-snippet {
+  color: #9ca3af;
+}
