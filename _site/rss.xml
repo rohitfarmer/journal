@@ -4,7 +4,7 @@
   <title>Rohit's Journal – 2025</title>
   <link>journal.rohitfarmer.com/2025.html</link>
   <description>Welcome to my online journal. The entries here are longer than a tweet, but smaller and less structured than a blog post. You can also follow my journal via <a href="https://journal.rohitfarmer.com/rss.xml">RSS</a>.</description>
-  <lastBuildDate>Tue, 02 Dec 2025 18:23:06 -0000</lastBuildDate>
+  <lastBuildDate>Tue, 02 Dec 2025 18:25:43 -0000</lastBuildDate>
   <item>
     <title>2025-12-31 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-12-31</link>
@@ -31,8 +31,7 @@
     <description><![CDATA[<ul>
 <li>Happy Thanksgiving, America. For the past seven years, we have been celebrating Thanksgiving at either our friends' or our family's house. This year, because two of us weren't well, we stayed at home and, for the first time, cooked the traditional meal ourselves. Since I was better than others, I took charge of cooking most of it, and I managed to roast turkey breasts, heat a piece of ham, make mashed potatoes from scratch, cook stuffing, shred chicken, make veggie rice, and make tomato salad. My wife made the cranberry sauce. I am very pleased with how I managed to cook everything while the turkey and ham were in the oven. Though we missed celebrating with our family this year, it was a good experience organizing our own Thanksgiving meal.</li>
 </ul>
-<p><figure class="entry-figure"><img alt="Photo of a dinning table with thanksgiving meal spread." src="https://files.mastodon.social/media_attachments/files/115/628/836/524/291/383/original/7a282f70de98f430.jpg"/><figcaption>Photo of a dinning table with thanksgiving meal spread.</figcaption></figure></p>
-<p>Our 2025 Thanksgiving meal spread.</p>
+<p><figure class="entry-figure"><img alt="Our 2025 Thanksgiving meal spread." src="https://files.mastodon.social/media_attachments/files/115/628/836/524/291/383/original/7a282f70de98f430.jpg"/><figcaption>Our 2025 Thanksgiving meal spread.</figcaption></figure></p>
 <ul>
 <li>After lunch, we watched the movie "Jingle Bell Heist" on Netflix. It's an okay one-time watch. Usually, there is one good Christmas movie every year, but I haven't seen any good ones out yet, at least not on Prime or Netflix. I know the second part of Wicked is out, and we have to see that in the movie theater.</li>
 </ul>]]></description>
@@ -67,8 +66,7 @@
     <guid>journal.rohitfarmer.com/2025.html#2025-11-24</guid>
     <pubDate>Mon, 24 Nov 2025 05:00:00 -0000</pubDate>
     <description><![CDATA[<p>Today, I bought my first mechanical keyboard, it's a KeyChron V3 TKL Knob Version. It's a wired, open-source, programmable keyboard. I still have to figure out how to program it, etc. However, I tried it on Windows and Mac, and it worked right out of the box. It's also my first backlit keyboard, so the RGB lighting is strange to me. There are multiple patterns to choose from. Right now, it's lighting up only the keys that I am using. It's a hefty keyboard with more height than I am used to, and there is no wrist pad. So I will have to buy a wrist pad separately, else it will start hurting me very quickly. Also, after using Kinesis split keyboards and Microsoft sculpt, going back to a non-ergonomic keyboard feels weird, and I can already feel the strain in my wrists. I will try it for a few days with the wrist rest pad and see if I still like it. I do like the smoothness of key strokes, the sound, and the tactile feedback. This keyboard is definitely better than Microsoft sculpt for working with vim editor.</p>
-<p><figure class="entry-figure"><img alt="Photo of my new keyboard Keychron V3 TKL Custom" src="https://cdn.fosstodon.org/media_attachments/files/115/606/334/909/093/262/original/9825563eb6ab9efb.jpg"/><figcaption>Photo of my new keyboard Keychron V3 TKL Custom</figcaption></figure></p>
-<p>KeyChron V3 TKL Custom Keyboard Knob Version</p>
+<p><figure class="entry-figure"><img alt="KeyChron V3 TKL Custom Keyboard Knob Version" src="https://cdn.fosstodon.org/media_attachments/files/115/606/334/909/093/262/original/9825563eb6ab9efb.jpg"/><figcaption>KeyChron V3 TKL Custom Keyboard Knob Version</figcaption></figure></p>
 <p>When I started writing my journal on this website, I thought it could be a good use of this Pubnix space, because I do not have any other use for it. I sometimes use this server to chat on IRC using Weechat, but it's rare. However, after writing a few entries and publishing them as an RSS feed, I am tempted to move it from this server to Netlify under my subdomain. I can still keep it HTML and CSS only, as it is right now, so I do not have to compile it as I do for my main website, which has started taking quite some time due to the number of blog posts. Let's see, I will spend some more time here and then decide if it's worth moving it to my subdomain and serving it via Netlify.</p>
 <p>I have been seeing increased activity from Singapore on my website. After every update, I got more hits from Singapore than from any other country, even though I do not have any friends in Singapore who might be interested in reading my blogs. I spent quite some time today analyzing the nginx logs with ChatGPT's help and figured out that those are likely bots searching for git directories and other routinely targeted endpoints. I already have fail2ban running on my instance, configured only for SSH, but I have now enabled it for nginx using one of its default settings. I will monitor for a few days and see if it reduces the hits from Singapore, before doing anything specific about the IPs.</p>]]></description>
   </item>
