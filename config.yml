@@ -1,0 +1,21 @@
+site_title: "Rohit's Journal"
+site_tagline: "Daily notes in plain text."
+site_url: "journal.rohitfarmer.com"
+
+# Where the year folders live (relative to this config)
+content_root: "."
+
+# Where to write the generated HTML (relative to this config)
+output_dir: "_site"
+
+# Path to your CSS file (relative to this config)
+css_path: "style.css"
+
+# Sort order of entries within a year:
+#   "chronological"  (oldest first)
+#   "reverse"        (newest first)
+order: "reverse"
+
+# Whether to make the latest year the index.html
+latest_as_index: true
+

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Rohit's Journal – 2025</title>
+  <link>journal.rohitfarmer.com/2025.html</link>
+  <description>Daily notes in plain text.</description>
+  <lastBuildDate>Tue, 02 Dec 2025 14:16:14 -0000</lastBuildDate>
+  <item>
+    <title>2025-12-31 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-12-31</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-12-31</guid>
+    <pubDate>Wed, 31 Dec 2025 05:00:00 -0000</pubDate>
+    <description>Last day of the year. Wrapped up a lot of things.</description>
+  </item>
+  <item>
+    <title>2025-12-30 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-12-30</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-12-30</guid>
+    <pubDate>Tue, 30 Dec 2025 05:00:00 -0000</pubDate>
+    <description>Relaxed day. Went for a walk, read a book.</description>
+  </item>
+  <item>
+    <title>2025-11-27 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-11-27</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-11-27</guid>
+    <pubDate>Thu, 27 Nov 2025 05:00:00 -0000</pubDate>
+    <description>*   Happy Thanksgiving, America. For the past seven years, we have been celebrating Thanksgiving at either our friends&#x27; or our family&#x27;s house. This year, because two of us weren&#x27;t well, we stayed at home and, for the first time, cooked the traditional meal ourselves. Since I was better than others, I took charge of cooking most of it, and I managed to roast turkey breasts, heat a piece of ham, make mashed potatoes from scratch, cook stuffing, shred chicken, make veggie rice, and make tomato salad. My wife made the cranberry sauce. I am very pleased with how I managed to cook everything while the turkey and ham were in the oven. Though we missed celebrating with our family this year, it was a good experience organizing our own Thanksgiving meal.</description>
+  </item>
+  <item>
+    <title>2025-11-26 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-11-26</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-11-26</guid>
+    <pubDate>Wed, 26 Nov 2025 05:00:00 -0000</pubDate>
+    <description>*   I took a day off today and managed to go to the gym in the morning. I usually go on Mondays, Wednesdays, and Fridays from 6 to 7 am, but this week I missed Monday because I was too tired to get up on time. Getting up at 5:30 am is hard, but that&#x27;s the only time when I can go to the gym. I have tried going to the gym after work, but it never worked for me. Even though mornings are hard, that&#x27;s the only time that seems to be working so far.</description>
+  </item>
+  <item>
+    <title>2025-11-25 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-11-25</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-11-25</guid>
+    <pubDate>Tue, 25 Nov 2025 05:00:00 -0000</pubDate>
+    <description>*   Yesterday, I used my new mechanical keyboard all day, and it&#x27;s fantastic! The keys are very smooth, and the backlighting effects are great.</description>
+  </item>
+  <item>
+    <title>2025-11-24 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-11-24</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-11-24</guid>
+    <pubDate>Mon, 24 Nov 2025 05:00:00 -0000</pubDate>
+    <description>Today, I bought my first mechanical keyboard, it&#x27;s a KeyChron V3 TKL Knob Version. It&#x27;s a wired, open-source, programmable keyboard. I still have to figure out how to program it, etc. However, I tried it on Windows and Mac, and it worked right out of the box. It&#x27;s also my first backlit keyboard, so the RGB lighting is strange to me. There are multiple patterns to choose from. Right now, it&#x27;s lighting up only the keys that I am using. It&#x27;s a hefty keyboard with more height than I am used to, and there is no wrist pad. So I will have to buy a wrist pad separately, else it will start hurting me very quickly. Also, after using Kinesis split keyboards and Microsoft sculpt, going back to a non-ergonomic keyboard feels weird, and I can already feel the strain in my wrists. I will try it for a few days with the wrist rest pad and see if I still like it. I do like the smoothness of key strokes, the sound, and the tactile feedback. This keyboard is definitely better than Microsoft sculpt for working with vim editor.</description>
+  </item>
+  <item>
+    <title>2025-11-20 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-11-20</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-11-20</guid>
+    <pubDate>Thu, 20 Nov 2025 05:00:00 -0000</pubDate>
+    <description>*   It&#x27;s my wife&#x27;s birthday today, but we&#x27;re both working and the kids are at school so that the celebration will be in the evening. We have taken a day off tomorrow because our preschooler has her Thanksgiving party at her daycare, and she wants us to be there.</description>
+  </item>
+  <item>
+    <title>2025-11-17 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-11-17</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-11-17</guid>
+    <pubDate>Mon, 17 Nov 2025 05:00:00 -0000</pubDate>
+    <description>*   I made some changes to the way I was making these journal entries. Previously, they were in between the consecutive &quot;h4&quot; tags, which were okay at the time. But then I decided to export the entries as an RSS feed via a Python script, and I realized it&#x27;s not future-proof because I won&#x27;t be able to use the H4 tag for anything else. Therefore, I updated the design to include each entry within an &quot;article&quot; tag and asked ChatGPT to update the Python script to generate the RSS feed using the &quot;article&quot; tags. I also updated the deploy script to first tidy the HTML using the Tidy command-line tool in Linux, export the RSS feed, and then rsync the files to serve the website. It&#x27;s working well now.</description>
+  </item>
+  <item>
+    <title>2025-11-13 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-11-13</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-11-13</guid>
+    <pubDate>Thu, 13 Nov 2025 05:00:00 -0000</pubDate>
+    <description>*   Today, I moved my Mastodon account from @swatantra@fosstodon.org to [@rohitfarmer@fosstodon.org](https://fosstodon.org/@rohitfarmer) . I liked the word &quot;swatantra,&quot; which means free in the sense of freedom, but it also resembles a female name in Hindi. Plus, when I chose this name, I thought I would stay anonymous on Mastodon, but it never happened, so today I decided to migrate to another account with my full name, since it&#x27;s already on all my other social accounts. Also, I was worried that someone might impersonate me, although the chances of that happening are still there, just in a different instance. Also, whenever anyone replied to my post and tagged @swatantra, it never felt like the message was addressed to me.</description>
+  </item>
+  <item>
+    <title>2025-11-06 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-11-06</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-11-06</guid>
+    <pubDate>Thu, 06 Nov 2025 05:00:00 -0000</pubDate>
+    <description>*   Today, I published the video of my [paddle-camping trip to Assateague Island](https://youtu.be/HhCp9shK8Zs?si=Dk8vuivlTB2IV3pJ) on the Outdoorsy Indians channel. It was supposed to be a fun trip, but due to the government shutdown and bad weather, we couldn&#x27;t get the permit to go backcountry camping, so we cut it short and returned home before the storm intensified. Nevertheless, we enjoyed the trip and were able to improvise and avoid ruining the whole trip. I had high hopes for this trip&#x27;s YouTube video, but it didn&#x27;t turn out the way I wanted. Most of the shots while I was paddling are from a single angle. Due to high winds and keeping up with the group, I didn&#x27;t get enough time to change my camera angles. I also lost my selfie stick, which I had been using for variations. It was not a substantial financial loss, but it did kill the mood and the overall quality of the project. Though I am getting better at handling unexpected circumstances and not letting them ruin my projects, I still have more to learn.</description>
+  </item>
+  <item>
+    <title>2025-11-04 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-11-04</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-11-04</guid>
+    <pubDate>Tue, 04 Nov 2025 05:00:00 -0000</pubDate>
+    <description>*   Today, I received at least 20 spam calls by midday, all asking me to enroll in some health insurance. It&#x27;s enrollment season in the US, and it seems spammers get hyperactive this time of year. It&#x27;s good that my smartphone lets me know it&#x27;s likely a spam call, so I don&#x27;t need to pick it up. Also, since my phone number is from Missouri, all the calls I am receiving are from a Missouri number. I lived there for only a year, and everyone I knew there has already moved to other places, so nobody should be calling me from there. Also, whenever I pick up the call, it&#x27;s always an Indian guy on the other end, and when I ask them to speak in Hindi, they pretend they don&#x27;t understand.</description>
+  </item>
+  <item>
+    <title>2025-11-01 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-11-01</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-11-01</guid>
+    <pubDate>Sat, 01 Nov 2025 04:00:00 -0000</pubDate>
+    <description>*   Yesterday, I wrote a blog post on [&quot;Tools That Just Work,&quot;](https://rohitfarmer.com/posts/2025/tools-that-just-work/) reviewing and praising the apps on my phone and computer that do one thing, do it well, and quietly make my days smoother. After writing the blog post, I realized that over the past couple of years, I have routinely moved away from big-tech, cloud-based, centralized apps to more FOSS and locally managed apps. The idea of keeping all our data and apps synchronized across our devices is a trap that leads us to sign up for centralized apps that require account creation. Even though we usually use one device for most activities, for example, I only use my phone to listen to podcasts and read blog posts via RSS. So why do I need an app that asks me to create an account to synchronize my data across multiple devices? I don&#x27;t even need to worry about losing my podcast subscription list if I lose my phone, since I can periodically back up OPML files from my app that list all the artists I&#x27;m subscribed to. I will write another blog post to elaborate on this point.</description>
+  </item>
+  <item>
+    <title>2025-10-29 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-10-29</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-10-29</guid>
+    <pubDate>Wed, 29 Oct 2025 04:00:00 -0000</pubDate>
+    <description>*   Today I wrote a blog post about [RSS](https://rohitfarmer.com/posts/2025/rss/) . What it is, how to use it, and why it matters. The main reason was to include its link in my blog post&#x27;s footer, where I ask people to follow my blog through RSS. Many people might not know what RSS is, and the link right underneath may give them a primer. We should keep mentioning and writing about tools, technologies, and our beliefs on our websites, not necessarily as experts, but as witnesses. The more people see us using and talking about it, the more willing they will be to adopt it.</description>
+  </item>
+  <item>
+    <title>2025-10-28 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-10-28</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-10-28</guid>
+    <pubDate>Tue, 28 Oct 2025 04:00:00 -0000</pubDate>
+    <description>*   I am halfway through the audiobook &quot;Be Water, My Friend&quot; by Shannon Lee. It&#x27;s a book about Bruce Lee&#x27;s teachings, written and narrated by his daughter, Shannon. So far, it has been great. However, as I listen to audiobooks in my car while commuting to work, I may have to get the paperback and re-read it to fully absorb the concepts.</description>
+  </item>
+  <item>
+    <title>2025-10-27 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-10-27</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-10-27</guid>
+    <pubDate>Mon, 27 Oct 2025 04:00:00 -0000</pubDate>
+    <description>*   One of my friends argued, against the vaccine mandates, that we should be allowed to refuse what we do not want to put in our bodies. I agree with that at the food level, but not for vaccines. The argument to support vaccine mandates is the same as the law behind drunk driving. Yes, you are allowed to get drunk, but not drive while intoxicated, because you might cause an accident and kill someone else. So, yes, in theory, you are allowed not to get vaccinated, but then don&#x27;t go out in public and pass on the infection to someone else who might die of the disease. And this argument primarily supports medical interventions against communicable diseases. If you have cancer, then nobody will require you to go and get chemotherapy, because your cancer can not spread to other people.</description>
+  </item>
+  <item>
+    <title>2025-10-23 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-10-23</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-10-23</guid>
+    <pubDate>Thu, 23 Oct 2025 04:00:00 -0000</pubDate>
+    <description>*   I wasn&#x27;t expecting to read about James Bond Stoicism, but here it is, and now I want to read the books. Movies are great, but since I am trying to read the books behind all my favorite films, this should be on my list. [James Bond Soicism](https://www.artofmanliness.com/character/advice/james-bond-stoicism/)</description>
+  </item>
+  <item>
+    <title>2025-10-22 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-10-22</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-10-22</guid>
+    <pubDate>Wed, 22 Oct 2025 04:00:00 -0000</pubDate>
+    <description>*   We had a small Diwali party in our office today and around 12 people turned up. We had a great time eating and chatting. Everybody likes Indian food here.</description>
+  </item>
+  <item>
+    <title>2025-10-21 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-10-21</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-10-21</guid>
+    <pubDate>Tue, 21 Oct 2025 04:00:00 -0000</pubDate>
+    <description>Today, I updated this website to complement my primary website. On my main website, I post long-form, polished blog posts, and it includes my CV and work-related documentation. This website is more like my online junk journal, where I can post whatever I find interesting without worrying too much about the format or the intended audience. It is also an attempt to utilize Ctrl-C more regularly. I like the idea of pubnixes, and more people should use Tildeverse to make the internet less siloed by big tech and more interesting.</description>
+  </item>
+  <item>
+    <title>2025-09-16 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-09-16</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-09-16</guid>
+    <pubDate>Tue, 16 Sep 2025 04:00:00 -0000</pubDate>
+    <description>I was reading on [NPR today that 9/16/25](https://text.npr.org/nx-s1-5535545) is a pretty special date. Not only does it line up perfectly with the Pythagorean theorem (3² + 4² = 5²), but it&#x27;s also made up of the squares of three consecutive numbers—3, 4, and 5. So 9 is 3², 16 is 4², and 25 is 5². I am not a math nerd, but it&#x27;s cool to bump into something like this.</description>
+  </item>
+  <item>
+    <title>2025-04-03 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-04-03</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-04-03</guid>
+    <pubDate>Thu, 03 Apr 2025 04:00:00 -0000</pubDate>
+    <description>After a long hiatus, I have resumed listening to audiobooks in my car since I started commuting to work daily. The best part is that I borrow audiobooks from my local Montgomery County, Maryland library. In the past three weeks, I finished listening to Analog Church/Christian by Jay Y. Kim and am now listening to The Revenge of Analog by David Sax. Public libraries in the USA are a blessing and a massive resource that few people tap into.</description>
+  </item>
+</channel>
+</rss>

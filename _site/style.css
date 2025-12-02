@@ -1,0 +1,303 @@
+/* Rohit's Journal – site styles */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar (year bar) */
+
+.sidebar {
+  background: #111827;
+  color: #e5e7eb;
+  padding: 1.75rem 1.5rem;
+  width: 240px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.site-header {
+  margin-bottom: 1.75rem;
+}
+
+.site-title {
+  font-size: 1.3rem;
+  margin: 0 0 0.25rem;
+}
+
+.site-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-title a:hover {
+  text-decoration: none;
+}
+
+.site-tagline {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.year-nav-title {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+}
+
+.year-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.year-nav-list li {
+  margin-bottom: 0.25rem;
+}
+
+.year-link {
+  display: block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.year-link:hover {
+  background: #1f2937;
+  text-decoration: none;
+}
+
+.year-link.active {
+  background: #2563eb;
+  color: #f9fafb;
+}
+
+/* Main content area */
+
+.content {
+  flex: 1;
+  padding: 2rem 1.75rem 3rem;
+}
+
+/* Centered column for entries */
+
+.content-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Header above entries */
+
+.content-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.75rem;
+}
+
+.year-title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.content-subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Entries */
+
+.entry {
+  background: #ffffff;
+  border-radius: 0.9rem;
+  padding: 1.3rem 1.5rem;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04);
+  border: 1px solid #e5e7eb;
+}
+
+.entry-header {
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.entry-date {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.entry-date time {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Permalink icon next to date */
+
+.entry-permalink {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.entry-permalink:hover {
+  color: #4b5563;
+  text-decoration: none;
+}
+
+/* Body text */
+
+.entry-body p:first-child {
+  margin-top: 0.2rem;
+}
+
+.entry-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Lists */
+
+.entry-body ul,
+.entry-body ol {
+  margin-top: 0.4rem;
+  padding-left: 1.4rem;
+}
+
+.entry-body li {
+  margin-bottom: 0.15rem;
+}
+
+/* Images and captions */
+
+.entry-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* figures inserted by wrap_images_with_figures */
+
+.entry-body figure.entry-figure {
+  margin: 0.75rem auto;
+  text-align: center;
+}
+
+.entry-body figure.entry-figure img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+}
+
+.entry-body figure.entry-figure figcaption {
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Code blocks unchanged... */
+
+
+/* Images inside entries */
+
+.entry-body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.75rem auto;
+  border-radius: 0.5rem;
+}
+
+/* Optional: if you want a subtle frame around images */
+
+.entry-body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.75rem auto;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.12);
+}
+
+
+/* Code blocks */
+
+.entry-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.9em;
+  background: #f3f4f6;
+  padding: 0.05rem 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.entry-body pre {
+  background: #0b1120;
+  color: #e5e7eb;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.55rem;
+  overflow-x: auto;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    max-height: none;
+    border-bottom: 1px solid #1f2937;
+  }
+
+  .content {
+    padding: 1.25rem 1rem 2.5rem;
+  }
+
+  .content-inner {
+    max-width: 100%;
+  }
+}
+
