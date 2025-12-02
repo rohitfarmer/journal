@@ -480,3 +480,96 @@ a:hover {
 #theme-toggle:checked ~ .layout .search-result-snippet {
   color: #9ca3af;
 }
+
+.entry-tags {
+  list-style: none;
+  margin: 0 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.entry-tags li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Tag pills */
+
+.entry-tags {
+  list-style: none;
+  margin: 0 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.entry-tag {
+  font-size: 0.75rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* Dark mode tweaks for tags */
+
+#theme-toggle:checked ~ .layout .entry-tag {
+  background: #111827;
+  color: #e5e7eb;
+}
+
+/* Sidebar extra links (On this day) */
+
+.sidebar-extra-links {
+  margin: 0 0 1rem;
+}
+
+.sidebar-link {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: 1px solid #4b5563;
+  color: #e5e7eb;
+}
+
+.sidebar-link:hover {
+  background: #1f2937;
+  text-decoration: none;
+}
+
+.sidebar-link.active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #f9fafb;
+}
+
+/* Dark mode tweak */
+
+#theme-toggle:checked ~ .layout .sidebar-link {
+  border-color: #6b7280;
+}
+
+/* both link and span share the same pill look */
+.entry-tag {
+  font-size: 0.75rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: #e5e7eb;
+  color: #374151;
+  text-decoration: none;
+}
+
+.entry-tag:hover {
+  text-decoration: none;
+  background: #d1d5db;
+}
+
+/* Dark mode tweaks */
+#theme-toggle:checked ~ .layout .entry-tag {
+  background: #111827;
+  color: #e5e7eb;
+}
