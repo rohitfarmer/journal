@@ -8,10 +8,9 @@ from pathlib import Path
 from datetime import datetime
 from email.utils import formatdate
 
-
-import markdown       
-import yaml           
-from bs4 import BeautifulSoup  
+import markdown       # pip install markdown
+import yaml           # pip install pyyaml
+from bs4 import BeautifulSoup  # pip install beautifulsoup4
 
 BASE_DIR = Path(__file__).parent
 CONFIG_FILE = BASE_DIR / "config.yaml"
@@ -28,17 +27,16 @@ def load_config():
 
     data = yaml.safe_load(CONFIG_FILE.read_text(encoding="utf-8")) or {}
 
+    # extra_head can be a string or a list
     extra_head = data.get("extra_head", [])
-    # Normalize: allow string or list
     if isinstance(extra_head, str):
         extra_head_list = [extra_head]
     elif isinstance(extra_head, list):
-        # Ensure all elements are strings
         extra_head_list = [str(x) for x in extra_head]
     else:
         extra_head_list = []
-    
-    # extra_footer
+
+    # extra_footer can be a string or a list
     extra_footer = data.get("extra_footer", [])
     if isinstance(extra_footer, str):
         extra_footer_list = [extra_footer]
@@ -50,17 +48,17 @@ def load_config():
     cfg = {
         "site_title": data.get("site_title", "Journal"),
         "site_tagline": data.get("site_tagline", ""),
-        "site_url": data.get("site_url", ""),
+        "site_url": data.get("site_url", ""),          # optional, for RSS
         "content_root": data.get("content_root", "."),
         "output_dir": data.get("output_dir", "_site"),
         "css_path": data.get("css_path", "style.css"),
-        "order": data.get("order", "reverse"),  # "reverse" or "chronological"
+        # default to newest first
+        "order": data.get("order", "reverse"),         # "reverse" or "chronological"
         "latest_as_index": bool(data.get("latest_as_index", True)),
         "extra_head": extra_head_list,
         "extra_footer": extra_footer_list,
     }
     return cfg
-
 
 
 def parse_month_file(path: Path):
@@ -242,18 +240,21 @@ def render_year_page(year, years, entries, cfg, *, is_index=False):
 
     years_nav_html = "\n          ".join(year_links)
 
-    # Build extra <head> HTML from config
-    extra_head_html = ""
+    # Extra <head> HTML from config
     extra_head_items = cfg.get("extra_head") or []
+    extra_head_html = ""
     if extra_head_items:
-        # Indent nicely for readability
         extra_head_html = "\n  " + "\n  ".join(extra_head_items)
 
-    # Build extra footer HTML from config
+    # Extra footer HTML from config
     extra_footer_items = cfg.get("extra_footer") or []
     extra_footer_html = ""
     if extra_footer_items:
         extra_footer_html = "\n    " + "\n    ".join(extra_footer_items)
+
+    order_text = (
+        "reverse chronological" if cfg.get("order", "reverse") == "reverse" else "chronological"
+    )
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -262,8 +263,7 @@ def render_year_page(year, years, entries, cfg, *, is_index=False):
   <title>{page_title}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
-  <link rel="alternate" type="application/rss+xml" title="{site_title} – RSS" href="rss.xml">
-  {extra_head_html}
+  <link rel="alternate" type="application/rss+xml" title="{site_title} – RSS" href="rss.xml">{extra_head_html}
 </head>
 <body>
 <div class="layout">
@@ -284,16 +284,18 @@ def render_year_page(year, years, entries, cfg, *, is_index=False):
     <div class="content-inner">
       <header class="content-header">
         {main_heading}
-        <p class="content-subtitle">Entries are shown in { 'reverse chronological' if cfg.get('order','reverse') == 'reverse' else 'chronological' } order.</p>
+        <p class="content-subtitle">Entries are shown in {order_text} order.</p>
       </header>
 
       {articles_html}
     </div>
   </main>
 </div>
-    <footer class="site-footer">
-        {extra_footer_html}
-    </footer>
+
+<footer class="site-footer">
+  {extra_footer_html}
+</footer>
+
 </body>
 </html>
 """
@@ -312,6 +314,9 @@ def copy_css(css_src: Path, output_dir: Path):
 def generate_rss(latest_year: str, entries, cfg: dict, output_dir: Path):
     """
     Generate an RSS 2.0 feed for the latest year and write _site/rss.xml.
+
+    IMPORTANT: description now contains rendered HTML (not Markdown),
+    wrapped in CDATA so RSS readers can display it properly.
     """
     site_title = cfg["site_title"]
     site_tagline = cfg.get("site_tagline", "")
@@ -339,21 +344,20 @@ def generate_rss(latest_year: str, entries, cfg: dict, output_dir: Path):
 
         title = f"{date_str} – {site_title}"
 
-        # First non-empty line from the markdown as a short description
-        summary_line = ""
-        for line in e["content_md"].splitlines():
-            if line.strip():
-                summary_line = line.strip()
-                break
+        # Render full entry HTML for RSS (like the page body, but without <article>)
+        entry_html = wrap_images_with_figures(
+            markdown.markdown(e["content_md"])
+        )
 
-        description = html.escape(summary_line) if summary_line else ""
+        # Use CDATA so we can include HTML in <description>
+        description_cdata = f"<![CDATA[{entry_html}]]>"
 
         items_xml.append(f"""  <item>
     <title>{title}</title>
     <link>{link}</link>
     <guid>{link}</guid>
     <pubDate>{formatdate(dt.timestamp())}</pubDate>
-    <description>{description}</description>
+    <description>{description_cdata}</description>
   </item>""")
 
     rss_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
@@ -429,4 +433,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

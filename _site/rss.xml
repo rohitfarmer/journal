@@ -3,147 +3,223 @@
 <channel>
   <title>Rohit's Journal – 2025</title>
   <link>journal.rohitfarmer.com/2025.html</link>
-  <description>Daily notes in plain text.</description>
-  <lastBuildDate>Tue, 02 Dec 2025 17:54:44 -0000</lastBuildDate>
+  <description>Welcome to my online journal. The entries here are longer than a tweet, but smaller and less structured than a blog post. You can also follow my journal via <a href="https://journal.rohitfarmer.com/rss.xml">RSS</a>.</description>
+  <lastBuildDate>Tue, 02 Dec 2025 18:23:06 -0000</lastBuildDate>
   <item>
     <title>2025-12-31 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-12-31</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-12-31</guid>
     <pubDate>Wed, 31 Dec 2025 05:00:00 -0000</pubDate>
-    <description>Last day of the year. Wrapped up a lot of things.</description>
+    <description><![CDATA[<p>Last day of the year. Wrapped up a lot of things.</p>
+<ul>
+<li>Finished the journal SSG</li>
+<li>Deployed to pubnix</li>
+</ul>]]></description>
   </item>
   <item>
     <title>2025-12-30 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-12-30</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-12-30</guid>
     <pubDate>Tue, 30 Dec 2025 05:00:00 -0000</pubDate>
-    <description>Relaxed day. Went for a walk, read a book.</description>
+    <description><![CDATA[<p>Relaxed day. Went for a walk, read a book.</p>]]></description>
   </item>
   <item>
     <title>2025-11-27 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-11-27</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-11-27</guid>
     <pubDate>Thu, 27 Nov 2025 05:00:00 -0000</pubDate>
-    <description>*   Happy Thanksgiving, America. For the past seven years, we have been celebrating Thanksgiving at either our friends&#x27; or our family&#x27;s house. This year, because two of us weren&#x27;t well, we stayed at home and, for the first time, cooked the traditional meal ourselves. Since I was better than others, I took charge of cooking most of it, and I managed to roast turkey breasts, heat a piece of ham, make mashed potatoes from scratch, cook stuffing, shred chicken, make veggie rice, and make tomato salad. My wife made the cranberry sauce. I am very pleased with how I managed to cook everything while the turkey and ham were in the oven. Though we missed celebrating with our family this year, it was a good experience organizing our own Thanksgiving meal.</description>
+    <description><![CDATA[<ul>
+<li>Happy Thanksgiving, America. For the past seven years, we have been celebrating Thanksgiving at either our friends' or our family's house. This year, because two of us weren't well, we stayed at home and, for the first time, cooked the traditional meal ourselves. Since I was better than others, I took charge of cooking most of it, and I managed to roast turkey breasts, heat a piece of ham, make mashed potatoes from scratch, cook stuffing, shred chicken, make veggie rice, and make tomato salad. My wife made the cranberry sauce. I am very pleased with how I managed to cook everything while the turkey and ham were in the oven. Though we missed celebrating with our family this year, it was a good experience organizing our own Thanksgiving meal.</li>
+</ul>
+<p><figure class="entry-figure"><img alt="Photo of a dinning table with thanksgiving meal spread." src="https://files.mastodon.social/media_attachments/files/115/628/836/524/291/383/original/7a282f70de98f430.jpg"/><figcaption>Photo of a dinning table with thanksgiving meal spread.</figcaption></figure></p>
+<p>Our 2025 Thanksgiving meal spread.</p>
+<ul>
+<li>After lunch, we watched the movie "Jingle Bell Heist" on Netflix. It's an okay one-time watch. Usually, there is one good Christmas movie every year, but I haven't seen any good ones out yet, at least not on Prime or Netflix. I know the second part of Wicked is out, and we have to see that in the movie theater.</li>
+</ul>]]></description>
   </item>
   <item>
     <title>2025-11-26 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-11-26</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-11-26</guid>
     <pubDate>Wed, 26 Nov 2025 05:00:00 -0000</pubDate>
-    <description>*   I took a day off today and managed to go to the gym in the morning. I usually go on Mondays, Wednesdays, and Fridays from 6 to 7 am, but this week I missed Monday because I was too tired to get up on time. Getting up at 5:30 am is hard, but that&#x27;s the only time when I can go to the gym. I have tried going to the gym after work, but it never worked for me. Even though mornings are hard, that&#x27;s the only time that seems to be working so far.</description>
+    <description><![CDATA[<ul>
+<li>I took a day off today and managed to go to the gym in the morning. I usually go on Mondays, Wednesdays, and Fridays from 6 to 7 am, but this week I missed Monday because I was too tired to get up on time. Getting up at 5:30 am is hard, but that's the only time when I can go to the gym. I have tried going to the gym after work, but it never worked for me. Even though mornings are hard, that's the only time that seems to be working so far.</li>
+<li>Today, I realized that grocery prices have really gone up. I never used to pay attention to how much I was paying for groceries because my family is small, so we do not have much consumption. But today, I shopped for Thanksgiving lunch, and yes, the quantity and variety were more than I usually shop for, but it did feel like prices had gone up. We will still be okay, but I can see how it might affect many families, especially around the holiday season.</li>
+<li>I am constantly considering whether to continue writing on this pubnix website or move my journal to my own subdomain. I like the idea of sharing spaces, but I do not see many people actively using this server. I also do not know how long this server will be around. I don't care much about losing the data, since everything is version-controlled on GitHub, but now that I'm publishing the RSS feed, if people start following, the address to this journal will change if I move to my subdomain in the future. This is why most pubnixes aren't very active: people start building things, and once the project matures, they move the project to their own domain. So, nothing long-lasting exists on these public servers.</li>
+</ul>]]></description>
   </item>
   <item>
     <title>2025-11-25 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-11-25</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-11-25</guid>
     <pubDate>Tue, 25 Nov 2025 05:00:00 -0000</pubDate>
-    <description>*   Yesterday, I used my new mechanical keyboard all day, and it&#x27;s fantastic! The keys are very smooth, and the backlighting effects are great.</description>
+    <description><![CDATA[<ul>
+<li>Yesterday, I used my new mechanical keyboard all day, and it's fantastic! The keys are very smooth, and the backlighting effects are great.</li>
+<li>Today is cold, and around 1 p.m., it started raining. I really dislike the combination of cold weather and rain. It reminds me of my three and a half years in the UK, where I had to walk to and from my lab year-round in the miserable cold and rain. Aside from the weather, I loved everything else about my time in the UK.</li>
+<li>I re-wrote quite a few scripts today for my latest analysis on the PhIP-Seq project. Specifically, I changed the transformation from log10 to log2 for both heatmaps and the paired t-tests.</li>
+<li>My journal club is in two weeks, and I have to pick a paper to present. I am not a great fan of journal clubs. Although it's a routine part of academic life, I have always found it cumbersome and done under pressure rather than willingly.</li>
+<li>I am going on leave from tomorrow for the rest of this week. It's Thanksgiving week in the USA, so most people take days off around Thanksgiving. I have been feeling a bit stretched lately, and I need this break.</li>
+</ul>]]></description>
   </item>
   <item>
     <title>2025-11-24 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-11-24</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-11-24</guid>
     <pubDate>Mon, 24 Nov 2025 05:00:00 -0000</pubDate>
-    <description>Today, I bought my first mechanical keyboard, it&#x27;s a KeyChron V3 TKL Knob Version. It&#x27;s a wired, open-source, programmable keyboard. I still have to figure out how to program it, etc. However, I tried it on Windows and Mac, and it worked right out of the box. It&#x27;s also my first backlit keyboard, so the RGB lighting is strange to me. There are multiple patterns to choose from. Right now, it&#x27;s lighting up only the keys that I am using. It&#x27;s a hefty keyboard with more height than I am used to, and there is no wrist pad. So I will have to buy a wrist pad separately, else it will start hurting me very quickly. Also, after using Kinesis split keyboards and Microsoft sculpt, going back to a non-ergonomic keyboard feels weird, and I can already feel the strain in my wrists. I will try it for a few days with the wrist rest pad and see if I still like it. I do like the smoothness of key strokes, the sound, and the tactile feedback. This keyboard is definitely better than Microsoft sculpt for working with vim editor.</description>
+    <description><![CDATA[<p>Today, I bought my first mechanical keyboard, it's a KeyChron V3 TKL Knob Version. It's a wired, open-source, programmable keyboard. I still have to figure out how to program it, etc. However, I tried it on Windows and Mac, and it worked right out of the box. It's also my first backlit keyboard, so the RGB lighting is strange to me. There are multiple patterns to choose from. Right now, it's lighting up only the keys that I am using. It's a hefty keyboard with more height than I am used to, and there is no wrist pad. So I will have to buy a wrist pad separately, else it will start hurting me very quickly. Also, after using Kinesis split keyboards and Microsoft sculpt, going back to a non-ergonomic keyboard feels weird, and I can already feel the strain in my wrists. I will try it for a few days with the wrist rest pad and see if I still like it. I do like the smoothness of key strokes, the sound, and the tactile feedback. This keyboard is definitely better than Microsoft sculpt for working with vim editor.</p>
+<p><figure class="entry-figure"><img alt="Photo of my new keyboard Keychron V3 TKL Custom" src="https://cdn.fosstodon.org/media_attachments/files/115/606/334/909/093/262/original/9825563eb6ab9efb.jpg"/><figcaption>Photo of my new keyboard Keychron V3 TKL Custom</figcaption></figure></p>
+<p>KeyChron V3 TKL Custom Keyboard Knob Version</p>
+<p>When I started writing my journal on this website, I thought it could be a good use of this Pubnix space, because I do not have any other use for it. I sometimes use this server to chat on IRC using Weechat, but it's rare. However, after writing a few entries and publishing them as an RSS feed, I am tempted to move it from this server to Netlify under my subdomain. I can still keep it HTML and CSS only, as it is right now, so I do not have to compile it as I do for my main website, which has started taking quite some time due to the number of blog posts. Let's see, I will spend some more time here and then decide if it's worth moving it to my subdomain and serving it via Netlify.</p>
+<p>I have been seeing increased activity from Singapore on my website. After every update, I got more hits from Singapore than from any other country, even though I do not have any friends in Singapore who might be interested in reading my blogs. I spent quite some time today analyzing the nginx logs with ChatGPT's help and figured out that those are likely bots searching for git directories and other routinely targeted endpoints. I already have fail2ban running on my instance, configured only for SSH, but I have now enabled it for nginx using one of its default settings. I will monitor for a few days and see if it reduces the hits from Singapore, before doing anything specific about the IPs.</p>]]></description>
   </item>
   <item>
     <title>2025-11-20 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-11-20</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-11-20</guid>
     <pubDate>Thu, 20 Nov 2025 05:00:00 -0000</pubDate>
-    <description>*   It&#x27;s my wife&#x27;s birthday today, but we&#x27;re both working and the kids are at school so that the celebration will be in the evening. We have taken a day off tomorrow because our preschooler has her Thanksgiving party at her daycare, and she wants us to be there.</description>
+    <description><![CDATA[<ul>
+<li>It's my wife's birthday today, but we're both working and the kids are at school so that the celebration will be in the evening. We have taken a day off tomorrow because our preschooler has her Thanksgiving party at her daycare, and she wants us to be there.</li>
+<li>I am so tempted to write a blog post in response to Kev's blog post <a href="https://kevquirk.com/blog/why-do-you-need-big-tech-for-your-ssg/">Why Do You Need Big Tech for Your SSG?</a>, which I eventually will, but today was a tiring day, and now I am too drained to think. I spent the whole day debugging an R script. It was an unexpected error, but it took so long to spot. I am glad that I did not give up and finished it today itself. Now I can start plotting figures with a fresh mind when I come to work next.</li>
+<li>I have started dabbling in PHP for one of my future projects. I do have some PHP scripts running on my main website, but they are all written by ChatGPT. For the project I am planning, I need a better understanding of basic PHP, MongoDB, and some JavaScript to put everything together.</li>
+<li>I am halfway through listening to the audiobook The Buy Nothing, Get Everything Plan. It's okay so far. The main takeaway for me so far is the addition of the Refuse to Reduce, Reuse, and Recycle philosophy. The portion where I am right now talks a lot about repurposing household items for alternative uses. Which is interesting, but a lot of it is already available on YouTube and blogs. The main reason I like the buy nothing project is its central idea of not buying but sharing stuff and getting to know your neighborhood - the community aspect.</li>
+<li>Now these journal entries are also being listed on my main website - just the latest 5.</li>
+<li>I am doing well, keeping up with the blog posts that I have subscribed to via RSS in the Capy Reader app. I am trying not to leave posts unread, as that overwhelms me and I stop reading altogether. So if there are unread posts I can't read, I mark them all read to get a clean slate. If I am really interested, I can always go back and read them. But at least I am not seeing any unread posts glaring at me.</li>
+</ul>]]></description>
   </item>
   <item>
     <title>2025-11-17 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-11-17</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-11-17</guid>
     <pubDate>Mon, 17 Nov 2025 05:00:00 -0000</pubDate>
-    <description>*   I made some changes to the way I was making these journal entries. Previously, they were in between the consecutive &quot;h4&quot; tags, which were okay at the time. But then I decided to export the entries as an RSS feed via a Python script, and I realized it&#x27;s not future-proof because I won&#x27;t be able to use the H4 tag for anything else. Therefore, I updated the design to include each entry within an &quot;article&quot; tag and asked ChatGPT to update the Python script to generate the RSS feed using the &quot;article&quot; tags. I also updated the deploy script to first tidy the HTML using the Tidy command-line tool in Linux, export the RSS feed, and then rsync the files to serve the website. It&#x27;s working well now.</description>
+    <description><![CDATA[<ul>
+<li>I made some changes to the way I was making these journal entries. Previously, they were in between the consecutive "h4" tags, which were okay at the time. But then I decided to export the entries as an RSS feed via a Python script, and I realized it's not future-proof because I won't be able to use the H4 tag for anything else. Therefore, I updated the design to include each entry within an "article" tag and asked ChatGPT to update the Python script to generate the RSS feed using the "article" tags. I also updated the deploy script to first tidy the HTML using the Tidy command-line tool in Linux, export the RSS feed, and then rsync the files to serve the website. It's working well now.</li>
+<li>For quite some time, I have been thinking about how to use this space, and now it seems the best way is to use it as an online journal where I can write unstructured, longer pieces that are neither a tweet nor a blog post. I am not expecting anyone to follow these entries, but if they want to, they can do so via RSS. RSS will also be helpful, as it lets me use my RSS reader to go back and read a previous entry.</li>
+<li>I am also enjoying using Google Cloud Shell to SSH to my remote computers from anywhere using a web browser. It also adds an extra security layer, because now I am not connecting from my local machine but from an instance on Google Cloud.</li>
+<li>The weekend was crazy. We decided to reorganize our house to give our kids their own room without our home office in it. We moved the office to our bedroom and gave the kids the master bedroom with all their toys, clothes, and school stuff. Now that all the kids' stuff is contained within their room, I hope it will not be scattered all over the house. We currently live in a two-bedroom apartment that is getting small by the day for the four of us.</li>
+<li>I am adding this point to test whether, if I update the list on the same date, my RSS reader will update the entry. Okay, the entry has been updated with the new content, but the post still shows as read.</li>
+</ul>]]></description>
   </item>
   <item>
     <title>2025-11-13 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-11-13</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-11-13</guid>
     <pubDate>Thu, 13 Nov 2025 05:00:00 -0000</pubDate>
-    <description>*   Today, I moved my Mastodon account from @swatantra@fosstodon.org to [@rohitfarmer@fosstodon.org](https://fosstodon.org/@rohitfarmer) . I liked the word &quot;swatantra,&quot; which means free in the sense of freedom, but it also resembles a female name in Hindi. Plus, when I chose this name, I thought I would stay anonymous on Mastodon, but it never happened, so today I decided to migrate to another account with my full name, since it&#x27;s already on all my other social accounts. Also, I was worried that someone might impersonate me, although the chances of that happening are still there, just in a different instance. Also, whenever anyone replied to my post and tagged @swatantra, it never felt like the message was addressed to me.</description>
+    <description><![CDATA[<ul>
+<li>Today, I moved my Mastodon account from @swatantra@fosstodon.org to <a href="https://fosstodon.org/@rohitfarmer">@rohitfarmer@fosstodon.org</a> . I liked the word "swatantra," which means free in the sense of freedom, but it also resembles a female name in Hindi. Plus, when I chose this name, I thought I would stay anonymous on Mastodon, but it never happened, so today I decided to migrate to another account with my full name, since it's already on all my other social accounts. Also, I was worried that someone might impersonate me, although the chances of that happening are still there, just in a different instance. Also, whenever anyone replied to my post and tagged @swatantra, it never felt like the message was addressed to me.</li>
+<li>The US government shutdown is over, and everyone is back on campus. I was working the whole time, so coming to work was the same to me. However, throughout the shutdown, parking was effortless to find. On some days, I used to be the only person on my side of the garage floor. Now it's back to the same. If I do not arrive by 8:45, I will not get my desired parking spot. Fortunately, I am good at being on time to work. However, it's good to have some leeway in case of situations.</li>
+<li>Kev Quirk recently wrote an article about <a href="https://kevquirk.com/blog/what-happens-after-we-die/">"what happen after we die"</a> and today I read another article resonating with Kev's on <a href="https://thatalexguy.dev/posts/what-happens-after-we-die/">Alex White's blog</a> . Both these gentlemen wrote their pieces from an atheist perspective, which summarizes that there was nothing before birth and there will be nothing after death. I am a Christian, and I am feeling inclined to write something about my views on "what happens after we die". However, I am not sure if it will go well with my audience—especially my family. I have already written some <a href="https://rohitfarmer.com/posts/2025/the-balance-between-hope-and-reality/">hard stuff</a> lately - they might feel I am spiraling into something.</li>
+<li>It's the benefits enrollment period in the US, and every day for the past two weeks, I have been receiving 20 or more spam calls asking me to sign up for a state-sponsored plan. Fortunately, they are all from Missouri because my phone number is from there, but I do not live there anymore and do not qualify for any Missouri state benefits; therefore, it is easy for me to disconnect most of them. I also do not have any friends remaining in Missouri who would call me.</li>
+</ul>]]></description>
   </item>
   <item>
     <title>2025-11-06 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-11-06</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-11-06</guid>
     <pubDate>Thu, 06 Nov 2025 05:00:00 -0000</pubDate>
-    <description>*   Today, I published the video of my [paddle-camping trip to Assateague Island](https://youtu.be/HhCp9shK8Zs?si=Dk8vuivlTB2IV3pJ) on the Outdoorsy Indians channel. It was supposed to be a fun trip, but due to the government shutdown and bad weather, we couldn&#x27;t get the permit to go backcountry camping, so we cut it short and returned home before the storm intensified. Nevertheless, we enjoyed the trip and were able to improvise and avoid ruining the whole trip. I had high hopes for this trip&#x27;s YouTube video, but it didn&#x27;t turn out the way I wanted. Most of the shots while I was paddling are from a single angle. Due to high winds and keeping up with the group, I didn&#x27;t get enough time to change my camera angles. I also lost my selfie stick, which I had been using for variations. It was not a substantial financial loss, but it did kill the mood and the overall quality of the project. Though I am getting better at handling unexpected circumstances and not letting them ruin my projects, I still have more to learn.</description>
+    <description><![CDATA[<ul>
+<li>Today, I published the video of my <a href="https://youtu.be/HhCp9shK8Zs?si=Dk8vuivlTB2IV3pJ">paddle-camping trip to Assateague Island</a> on the Outdoorsy Indians channel. It was supposed to be a fun trip, but due to the government shutdown and bad weather, we couldn't get the permit to go backcountry camping, so we cut it short and returned home before the storm intensified. Nevertheless, we enjoyed the trip and were able to improvise and avoid ruining the whole trip. I had high hopes for this trip's YouTube video, but it didn't turn out the way I wanted. Most of the shots while I was paddling are from a single angle. Due to high winds and keeping up with the group, I didn't get enough time to change my camera angles. I also lost my selfie stick, which I had been using for variations. It was not a substantial financial loss, but it did kill the mood and the overall quality of the project. Though I am getting better at handling unexpected circumstances and not letting them ruin my projects, I still have more to learn.</li>
+<li>Today is my oldest daughter's science fair, and she has prepared a model of our solar system. Last year, it was the volcano model with vinegar and soda.</li>
+<li>The office is so quiet today. It's scary sometimes, but it's also helping me calm down and concentrate on work, with occasional breaks and updates to this website. I have lately gotten obsessed with writing here; it's less time-consuming than updating my main static website, which requires compilation for every update, and it's also not a formal place where I need to be careful about the quality and content of what I am writing. I am also getting it de-indexed from Google, so it doesn't appear in search results. This page sometimes feels like a void where I can scream and nobody will hear. But of course, it is live on the internet, so people can still find it if they want to.</li>
+</ul>]]></description>
   </item>
   <item>
     <title>2025-11-04 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-11-04</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-11-04</guid>
     <pubDate>Tue, 04 Nov 2025 05:00:00 -0000</pubDate>
-    <description>*   Today, I received at least 20 spam calls by midday, all asking me to enroll in some health insurance. It&#x27;s enrollment season in the US, and it seems spammers get hyperactive this time of year. It&#x27;s good that my smartphone lets me know it&#x27;s likely a spam call, so I don&#x27;t need to pick it up. Also, since my phone number is from Missouri, all the calls I am receiving are from a Missouri number. I lived there for only a year, and everyone I knew there has already moved to other places, so nobody should be calling me from there. Also, whenever I pick up the call, it&#x27;s always an Indian guy on the other end, and when I ask them to speak in Hindi, they pretend they don&#x27;t understand.</description>
+    <description><![CDATA[<ul>
+<li>Today, I received at least 20 spam calls by midday, all asking me to enroll in some health insurance. It's enrollment season in the US, and it seems spammers get hyperactive this time of year. It's good that my smartphone lets me know it's likely a spam call, so I don't need to pick it up. Also, since my phone number is from Missouri, all the calls I am receiving are from a Missouri number. I lived there for only a year, and everyone I knew there has already moved to other places, so nobody should be calling me from there. Also, whenever I pick up the call, it's always an Indian guy on the other end, and when I ask them to speak in Hindi, they pretend they don't understand.</li>
+<li>This government shutdown is taking a toll on me, and even though I am allowed to work, it's so depressing to come on campus and concentrate on work. Uncertainty is hard to deal with.</li>
+<li>I recently read this blog post <a href="https://www.artofmanliness.com/character/advice/stockdale-paradox/">"The Stockdale Paradox: A Philosophic Principle for Tough Times"</a> and it was really helpful, especially for the tough times that at least I am going through. I hope all of this will be over soon and my family and I can praise God for His blessings.</li>
+<li>I am using Google Cloud Shell to SSH to ctrl-c.club and edit these pages. It's the first time I found a good use of a cloud shell. Conveniently, I can use it to SSH from anywhere without a dedicated terminal on my device. However, since the 5GB persistent storage gets recycled after some time of inactivity, I can't configure it for any other purpose than SSH'ng to this machine. Unless I decide to use the cloud shell regularly.</li>
+</ul>]]></description>
   </item>
   <item>
     <title>2025-11-01 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-11-01</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-11-01</guid>
     <pubDate>Sat, 01 Nov 2025 04:00:00 -0000</pubDate>
-    <description>*   Yesterday, I wrote a blog post on [&quot;Tools That Just Work,&quot;](https://rohitfarmer.com/posts/2025/tools-that-just-work/) reviewing and praising the apps on my phone and computer that do one thing, do it well, and quietly make my days smoother. After writing the blog post, I realized that over the past couple of years, I have routinely moved away from big-tech, cloud-based, centralized apps to more FOSS and locally managed apps. The idea of keeping all our data and apps synchronized across our devices is a trap that leads us to sign up for centralized apps that require account creation. Even though we usually use one device for most activities, for example, I only use my phone to listen to podcasts and read blog posts via RSS. So why do I need an app that asks me to create an account to synchronize my data across multiple devices? I don&#x27;t even need to worry about losing my podcast subscription list if I lose my phone, since I can periodically back up OPML files from my app that list all the artists I&#x27;m subscribed to. I will write another blog post to elaborate on this point.</description>
+    <description><![CDATA[<ul>
+<li>Yesterday, I wrote a blog post on <a href="https://rohitfarmer.com/posts/2025/tools-that-just-work/">"Tools That Just Work,"</a> reviewing and praising the apps on my phone and computer that do one thing, do it well, and quietly make my days smoother. After writing the blog post, I realized that over the past couple of years, I have routinely moved away from big-tech, cloud-based, centralized apps to more FOSS and locally managed apps. The idea of keeping all our data and apps synchronized across our devices is a trap that leads us to sign up for centralized apps that require account creation. Even though we usually use one device for most activities, for example, I only use my phone to listen to podcasts and read blog posts via RSS. So why do I need an app that asks me to create an account to synchronize my data across multiple devices? I don't even need to worry about losing my podcast subscription list if I lose my phone, since I can periodically back up OPML files from my app that list all the artists I'm subscribed to. I will write another blog post to elaborate on this point.</li>
+<li>Today we watched the K-pop Demon Hunters movie on Netflix. We didn't have Netflix, so even though we knew it was a new craze among young girls, we didn't watch the film. We played all the songs many, many times. However, yesterday we witnessed the craze at our kids' Halloween parades at school: almost half the elementary school girls were dressed as Rumi from the movie, including the school principal. We decided to sign up for Netflix and watch the film. It was great, and we realized we had missed the opportunity to dress our girls as one of the characters. Next year, we will pay closer attention to trends leading up to Halloween.</li>
+<li>After the movie, I spent an hour or so in the afternoon with my youngest daughter, who is 4 now, at Cabin John Regional Park in Maryland, hiking on the gravel road and tossing rocks in the creek. It was the first time that she showed interest in an outdoor activity with me without throwing any tantrums or getting tired right away. One of the things I learned is that to keep her engaged, I have to change locations every 15-20 minutes and stop for snack breaks. She can keep on going if she's being fed and relatively engaged in different activities. I guess that is universal, but surely I did notice that for her today.</li>
+</ul>]]></description>
   </item>
   <item>
     <title>2025-10-29 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-10-29</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-10-29</guid>
     <pubDate>Wed, 29 Oct 2025 04:00:00 -0000</pubDate>
-    <description>*   Today I wrote a blog post about [RSS](https://rohitfarmer.com/posts/2025/rss/) . What it is, how to use it, and why it matters. The main reason was to include its link in my blog post&#x27;s footer, where I ask people to follow my blog through RSS. Many people might not know what RSS is, and the link right underneath may give them a primer. We should keep mentioning and writing about tools, technologies, and our beliefs on our websites, not necessarily as experts, but as witnesses. The more people see us using and talking about it, the more willing they will be to adopt it.</description>
+    <description><![CDATA[<ul>
+<li>Today I wrote a blog post about <a href="https://rohitfarmer.com/posts/2025/rss/">RSS</a> . What it is, how to use it, and why it matters. The main reason was to include its link in my blog post's footer, where I ask people to follow my blog through RSS. Many people might not know what RSS is, and the link right underneath may give them a primer. We should keep mentioning and writing about tools, technologies, and our beliefs on our websites, not necessarily as experts, but as witnesses. The more people see us using and talking about it, the more willing they will be to adopt it.</li>
+<li>I also included a meta tag in all the pages of this website for search engines to not to index and follow this website. I do not want this website to be private, but also not openly available. Users of Ctrl-c.club will still be able to see my website pages being updated and general audience can reach this website through it's link mentioned on my main website. I want people to first visit my main website before reaching this one, so if someone Googles my name then they should only get the URL of my main website in the search results.</li>
+</ul>]]></description>
   </item>
   <item>
     <title>2025-10-28 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-10-28</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-10-28</guid>
     <pubDate>Tue, 28 Oct 2025 04:00:00 -0000</pubDate>
-    <description>*   I am halfway through the audiobook &quot;Be Water, My Friend&quot; by Shannon Lee. It&#x27;s a book about Bruce Lee&#x27;s teachings, written and narrated by his daughter, Shannon. So far, it has been great. However, as I listen to audiobooks in my car while commuting to work, I may have to get the paperback and re-read it to fully absorb the concepts.</description>
+    <description><![CDATA[<ul>
+<li>I am halfway through the audiobook "Be Water, My Friend" by Shannon Lee. It's a book about Bruce Lee's teachings, written and narrated by his daughter, Shannon. So far, it has been great. However, as I listen to audiobooks in my car while commuting to work, I may have to get the paperback and re-read it to fully absorb the concepts.</li>
+<li>Today, I spent some time updating the NeoVim setup on this server. The HTML editing parts seems to be working fine, but I am having issues with R and Python execution. After trying for hours and asking, ChatGPT, Gemini and Lumo I gave up on getting Python and R working. At one point ChatGPT couldn't even get me a config file that I can use to write HTML without unnecessary complex tweaks and endless errors and warning popups. So I reverted back to my original setup with a few updates. For now it seems to have enough functionality to keep editing this website. I love using Neovim editor, but sometimes it can be a pain to get it running properly.</li>
+</ul>]]></description>
   </item>
   <item>
     <title>2025-10-27 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-10-27</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-10-27</guid>
     <pubDate>Mon, 27 Oct 2025 04:00:00 -0000</pubDate>
-    <description>*   One of my friends argued, against the vaccine mandates, that we should be allowed to refuse what we do not want to put in our bodies. I agree with that at the food level, but not for vaccines. The argument to support vaccine mandates is the same as the law behind drunk driving. Yes, you are allowed to get drunk, but not drive while intoxicated, because you might cause an accident and kill someone else. So, yes, in theory, you are allowed not to get vaccinated, but then don&#x27;t go out in public and pass on the infection to someone else who might die of the disease. And this argument primarily supports medical interventions against communicable diseases. If you have cancer, then nobody will require you to go and get chemotherapy, because your cancer can not spread to other people.</description>
+    <description><![CDATA[<ul>
+<li>One of my friends argued, against the vaccine mandates, that we should be allowed to refuse what we do not want to put in our bodies. I agree with that at the food level, but not for vaccines. The argument to support vaccine mandates is the same as the law behind drunk driving. Yes, you are allowed to get drunk, but not drive while intoxicated, because you might cause an accident and kill someone else. So, yes, in theory, you are allowed not to get vaccinated, but then don't go out in public and pass on the infection to someone else who might die of the disease. And this argument primarily supports medical interventions against communicable diseases. If you have cancer, then nobody will require you to go and get chemotherapy, because your cancer can not spread to other people.</li>
+<li>
+<p>Today I read the blog post <a href="https://kevquirk.com/blog/smartphones-are-not-the-enemy/">"Smartphones are not the enemy"</a> by Kev Quirk, which he wrote in support of Thomas Tigby's original post. I support the arguments these gentlemen make that the new dumbphone revolution is just a fad, and that smartphones themselves are not addictive; it's how and what we use them for. If you are hooked on apps based on the attention economy, you are doomed to doomscrolling. There are easier ways to manage phone addiction than moving to a dumb phone or an overly priced minimal phone. I have switched off all notifications except instant messengers and phone calls, and uninstalled Facebook and many other related apps. My phone usage is for making calls, texting, maps, camera, banking, gym sign-in, day care sign-in, Mastodon, RSS, and audiobooks. And none of these things are addictive to the point of despair.</p>
+</li>
+<li>
+<p>Kev posted his blog link on his Mastodon account to which someone replied "kinda like guns, right?". To which I replied "the consequences of gun violence are irreversible and can affect uninvolved parties. Smartphone usage only affects the primary user and can be reversed. Additionally, if you refrain from installing attention-grabbing or addictive apps, basically all of Meta's products, then a smartphone is no more destructive than a dumb phone. Smartphone usage is like food. Salad is always there, but people still choose deep-fried." Link to the comment thread <a href="https://fosstodon.org/@swatantra/115446321630383212">https://fosstodon.org/@swatantra/115446321630383212</a></p>
+</li>
+</ul>]]></description>
   </item>
   <item>
     <title>2025-10-23 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-10-23</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-10-23</guid>
     <pubDate>Thu, 23 Oct 2025 04:00:00 -0000</pubDate>
-    <description>*   I wasn&#x27;t expecting to read about James Bond Stoicism, but here it is, and now I want to read the books. Movies are great, but since I am trying to read the books behind all my favorite films, this should be on my list. [James Bond Soicism](https://www.artofmanliness.com/character/advice/james-bond-stoicism/)</description>
+    <description><![CDATA[<ul>
+<li>I wasn't expecting to read about James Bond Stoicism, but here it is, and now I want to read the books. Movies are great, but since I am trying to read the books behind all my favorite films, this should be on my list. <a href="https://www.artofmanliness.com/character/advice/james-bond-stoicism/">James Bond Soicism</a></li>
+<li>I am having such a hard time concentrating today. My brain seems to be mushed with all the worries and the distractions around me.</li>
+</ul>]]></description>
   </item>
   <item>
     <title>2025-10-22 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-10-22</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-10-22</guid>
     <pubDate>Wed, 22 Oct 2025 04:00:00 -0000</pubDate>
-    <description>*   We had a small Diwali party in our office today and around 12 people turned up. We had a great time eating and chatting. Everybody likes Indian food here.</description>
+    <description><![CDATA[<ul>
+<li>We had a small Diwali party in our office today and around 12 people turned up. We had a great time eating and chatting. Everybody likes Indian food here.</li>
+<li>I am trying to find a straight forward image hosting solution that I can use to display images on this website. I may end up uploading images directly to the server and then minimizing the size using Image Magick.</li>
+</ul>]]></description>
   </item>
   <item>
     <title>2025-10-21 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-10-21</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-10-21</guid>
     <pubDate>Tue, 21 Oct 2025 04:00:00 -0000</pubDate>
-    <description>Today, I updated this website to complement my primary website. On my main website, I post long-form, polished blog posts, and it includes my CV and work-related documentation. This website is more like my online junk journal, where I can post whatever I find interesting without worrying too much about the format or the intended audience. It is also an attempt to utilize Ctrl-C more regularly. I like the idea of pubnixes, and more people should use Tildeverse to make the internet less siloed by big tech and more interesting.</description>
+    <description><![CDATA[<p>Today, I updated this website to complement my primary website. On my main website, I post long-form, polished blog posts, and it includes my CV and work-related documentation. This website is more like my online junk journal, where I can post whatever I find interesting without worrying too much about the format or the intended audience. It is also an attempt to utilize Ctrl-C more regularly. I like the idea of pubnixes, and more people should use Tildeverse to make the internet less siloed by big tech and more interesting.</p>]]></description>
   </item>
   <item>
     <title>2025-09-16 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-09-16</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-09-16</guid>
     <pubDate>Tue, 16 Sep 2025 04:00:00 -0000</pubDate>
-    <description>I was reading on [NPR today that 9/16/25](https://text.npr.org/nx-s1-5535545) is a pretty special date. Not only does it line up perfectly with the Pythagorean theorem (3² + 4² = 5²), but it&#x27;s also made up of the squares of three consecutive numbers—3, 4, and 5. So 9 is 3², 16 is 4², and 25 is 5². I am not a math nerd, but it&#x27;s cool to bump into something like this.</description>
+    <description><![CDATA[<p>I was reading on <a href="https://text.npr.org/nx-s1-5535545">NPR today that 9/16/25</a> is a pretty special date. Not only does it line up perfectly with the Pythagorean theorem (3² + 4² = 5²), but it's also made up of the squares of three consecutive numbers—3, 4, and 5. So 9 is 3², 16 is 4², and 25 is 5². I am not a math nerd, but it's cool to bump into something like this.</p>]]></description>
   </item>
   <item>
     <title>2025-04-03 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-04-03</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-04-03</guid>
     <pubDate>Thu, 03 Apr 2025 04:00:00 -0000</pubDate>
-    <description>After a long hiatus, I have resumed listening to audiobooks in my car since I started commuting to work daily. The best part is that I borrow audiobooks from my local Montgomery County, Maryland library. In the past three weeks, I finished listening to Analog Church/Christian by Jay Y. Kim and am now listening to The Revenge of Analog by David Sax. Public libraries in the USA are a blessing and a massive resource that few people tap into.</description>
+    <description><![CDATA[<p>After a long hiatus, I have resumed listening to audiobooks in my car since I started commuting to work daily. The best part is that I borrow audiobooks from my local Montgomery County, Maryland library. In the past three weeks, I finished listening to Analog Church/Christian by Jay Y. Kim and am now listening to The Revenge of Analog by David Sax. Public libraries in the USA are a blessing and a massive resource that few people tap into.</p>]]></description>
   </item>
 </channel>
 </rss>

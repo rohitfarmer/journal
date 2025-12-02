@@ -1,5 +1,5 @@
 site_title: "Rohit's Journal"
-site_tagline: "Daily notes in plain text."
+site_tagline: 'Welcome to my online journal. The entries here are longer than a tweet, but smaller and less structured than a blog post. You can also follow my journal via <a href="https://journal.rohitfarmer.com/rss.xml">RSS</a>.'
 site_url: "journal.rohitfarmer.com"
 
 # Where the year folders live (relative to this config)
