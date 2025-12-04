@@ -4,13 +4,20 @@
   <title>Rohit's Journal – 2025</title>
   <link>journal.rohitfarmer.com/2025.html</link>
   <description>Welcome to my online journal. The entries here are longer than a tweet, but smaller and less structured than a blog post. You can also follow my journal via <a href="https://journal.rohitfarmer.com/rss.xml">RSS</a>.</description>
-  <lastBuildDate>Thu, 04 Dec 2025 16:20:35 -0000</lastBuildDate>
+  <lastBuildDate>Thu, 04 Dec 2025 20:49:03 -0000</lastBuildDate>
   <item>
     <title>2025-12-04 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-12-04</link>
     <guid>journal.rohitfarmer.com/2025.html#2025-12-04</guid>
     <pubDate>Thu, 04 Dec 2025 05:00:00 -0000</pubDate>
-    <description><![CDATA[<p>It's my baby's birthday today. I can't believe she is 8 years old now. Time flies; I feel like she was born just yesterday. I remember holding her for the first time in my arms, and she looked right at me. I had no clue what to do, I just became a father with no idea or confidence if I would be able to handle the responsibility, or know how to raise a child. I still don't know, and every day I think I am messing things up. But it's God's grace that both my kids are doing well, and we are learning to parent as they grow. I hope once they are old enough to reflect on our parenting, we will score some decent points. But today it's my baby's birthdaaayyy. Happy Birthday, Elsa. God bless you, and I wish you all happiness and success in life. Dream big, ask questions, and challenge the norms! (of course, outside the house) 😃</p>]]></description>
+    <description><![CDATA[<ul>
+<li>
+<p>It's my baby's birthday today. I can't believe she is 8 years old now. Time flies; I feel like she was born just yesterday. I remember holding her for the first time in my arms, and she looked right at me. I had no clue what to do, I just became a father with no idea or confidence if I would be able to handle the responsibility, or know how to raise a child. I still don't know, and every day I think I am messing things up. But it's God's grace that both my kids are doing well, and we are learning to parent as they grow. I hope once they are old enough to reflect on our parenting, we will score some decent points. But today it's my baby's birthdaaayyy. Happy Birthday, Elsa. God bless you, and I wish you all happiness and success in life. Dream big, ask questions, and challenge the norms! (of course, outside the house) 😃</p>
+</li>
+<li>
+<p>After testing this journaling system for the past two days, I have now released it as a standalone Static Site Generator system that anyone can use. I named it DriftNotes: A lightweight journaling engine for thoughts that drift between tweets and blogs. This is exciting, as it will be my first non-scientific software or tool that I have created and might appeal to a general audience. Here is the link to the GitHub repository <a href="https://github.com/rohitfarmer/driftnotes">https://github.com/rohitfarmer/driftnotes</a>.</p>
+</li>
+</ul>]]></description>
   </item>
   <item>
     <title>2025-12-03 – Rohit's Journal</title>
