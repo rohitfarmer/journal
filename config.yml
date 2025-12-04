@@ -3,21 +3,16 @@ site_tagline: 'Welcome to my online journal. The entries here are longer than a 
 site_url: "journal.rohitfarmer.com"
 
 # Where the year folders live (relative to this config)
-content_root: "entries"
+content_root: "content"
 
 # Where to write the generated HTML (relative to this config)
 output_dir: "_site"
 
-# Path to your CSS file (relative to this config)
-css_path: "style.css"
+order: "reverse"             # "reverse" (newest first) or "chronological"
+latest_as_index: true        # latest year becomes index.html
 
-# Sort order of entries within a year:
-#   "chronological"  (oldest first)
-#   "reverse"        (newest first)
-order: "reverse"
-
-# Whether to make the latest year the index.html
-latest_as_index: true
+enable_search: true          # Lunr search on year pages
+include_drafts: false        # include entries with draft: true or not
 
 extra_head: |
     <meta name="author" content="Rohit Farmer">
@@ -26,9 +21,3 @@ extra_head: |
 extra_footer: |
     <p>© 2025 Rohit Farmer — All rights reserved.</p>
     <p><a href="mailto:rohit@rohitfarmer.com">Contact</a></p>
-
-enable_search: true
-lunr_js_path: "lunr.js"
-search_js_path: "search.js"
-search_index_filename: "search_index.json"
-

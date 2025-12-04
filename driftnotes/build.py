@@ -13,10 +13,18 @@ import markdown       # pip install markdown
 import yaml           # pip install pyyaml
 from bs4 import BeautifulSoup  # pip install beautifulsoup4
 
-BASE_DIR = Path(__file__).parent
-CONFIG_FILE = BASE_DIR / "config.yml"
+BASE_DIR = Path(__file__).parent  # build-scripts directory
 
-# "## 2025-01-02" or "### 2025-01-02"
+# Filenames that live inside build-scripts/
+CSS_FILENAME = "style.css"
+LUNR_JS_FILENAME = "lunr.js"
+SEARCH_JS_FILENAME = "search.js"
+
+# Generated into output_dir
+THEME_JS_FILENAME = "theme.js"
+SEARCH_INDEX_FILENAME = "search_index.json"
+
+# Matches headings like "## 2025-01-02"
 ENTRY_HEADING_RE = re.compile(r"^(#{2,6})\s+(\d{4}-\d{2}-\d{2})\s*$")
 
 
@@ -24,12 +32,24 @@ ENTRY_HEADING_RE = re.compile(r"^(#{2,6})\s+(\d{4}-\d{2}-\d{2})\s*$")
 # Config
 # -----------------------
 
-def load_config():
-    if not CONFIG_FILE.exists():
-        print(f"Config file not found: {CONFIG_FILE}", file=sys.stderr)
+def get_config_path_from_args() -> Path:
+    """
+    Determine which config file to use.
+
+    - If a path is passed as first argument, use that.
+    - Otherwise, assume ../config.yml relative to build-scripts.
+    """
+    if len(sys.argv) > 1:
+        return Path(sys.argv[1]).resolve()
+    return (BASE_DIR.parent / "config.yml").resolve()
+
+
+def load_config(config_path: Path) -> dict:
+    if not config_path.exists():
+        print(f"Config file not found: {config_path}", file=sys.stderr)
         sys.exit(1)
 
-    data = yaml.safe_load(CONFIG_FILE.read_text(encoding="utf-8")) or {}
+    data = yaml.safe_load(config_path.read_text(encoding="utf-8")) or {}
 
     # extra_head can be string or list
     extra_head = data.get("extra_head", [])
@@ -53,17 +73,13 @@ def load_config():
         "site_title": data.get("site_title", "Journal"),
         "site_tagline": data.get("site_tagline", ""),
         "site_url": data.get("site_url", ""),
-        "content_root": data.get("content_root", "."),
+        "content_root": data.get("content_root", "content"),
         "output_dir": data.get("output_dir", "_site"),
-        "css_path": data.get("css_path", "style.css"),
-        "order": data.get("order", "reverse"),  # "reverse" or "chronological"
+        "order": data.get("order", "reverse"),   # "reverse" or "chronological"
         "latest_as_index": bool(data.get("latest_as_index", True)),
         "extra_head": extra_head_list,
         "extra_footer": extra_footer_list,
         "enable_search": bool(data.get("enable_search", True)),
-        "lunr_js_path": data.get("lunr_js_path", "lunr.js"),
-        "search_js_path": data.get("search_js_path", "search.js"),
-        "search_index_filename": data.get("search_index_filename", "search_index.json"),
         "include_drafts": bool(data.get("include_drafts", False)),
     }
     return cfg
@@ -121,13 +137,15 @@ def parse_month_file(path: Path):
     return entries
 
 
-def extract_meta(entry):
+def extract_meta(entry: dict):
     """
-    Extracts:
+    Extracts metadata from the top of entry["content_md"]:
+
       tags: outdoors, family
       draft: true
 
-    from the top of entry["content_md"].
+    tags: list[str]
+    draft: bool
     """
     lines = entry["content_md"].splitlines()
     tags = []
@@ -157,7 +175,11 @@ def extract_meta(entry):
     entry["draft"] = draft
 
 
-def collect_entries_by_year(content_root: Path, order: str = "reverse", include_drafts: bool = False):
+def collect_entries_by_year(
+    content_root: Path,
+    order: str = "reverse",
+    include_drafts: bool = False,
+):
     """
     Returns { "2024": [entries...], "2025": [entries...] }
     Entries sorted within each year by date.
@@ -260,7 +282,7 @@ def wrap_images_with_figures(html_fragment: str) -> str:
     return str(soup)
 
 
-def render_entry(entry, *, link_tags: bool = True):
+def render_entry(entry: dict, *, link_tags: bool = True) -> str:
     """
     Render a single <article> with date, permalink, and tag pills.
     """
@@ -303,7 +325,7 @@ def render_entry(entry, *, link_tags: bool = True):
 """
 
 
-def sidebar_extra_links(prefix: str = "", active_on_this_day: bool = False):
+def sidebar_extra_links(prefix: str = "", active_on_this_day: bool = False) -> str:
     """
     Left sidebar helper: 'On this day' and 'Tags' links.
     prefix: "" for root pages, "../" for tag pages.
@@ -319,7 +341,7 @@ def sidebar_extra_links(prefix: str = "", active_on_this_day: bool = False):
     </div>"""
 
 
-def build_common_head_and_footer(cfg):
+def build_common_head_and_footer(cfg: dict):
     extra_head_items = cfg.get("extra_head") or []
     extra_head_html = ""
     if extra_head_items:
@@ -333,7 +355,7 @@ def build_common_head_and_footer(cfg):
     return extra_head_html, extra_footer_html
 
 
-def search_ui_html(cfg):
+def search_ui_html(cfg: dict) -> str:
     """
     Only year pages / index get the search box.
     """
@@ -350,29 +372,30 @@ def search_ui_html(cfg):
 """
 
 
-def search_scripts_html(cfg, prefix: str = ""):
+def search_scripts_html(cfg: dict, prefix: str = "") -> str:
     """
-    Scripts for search; prefix is "" on root pages, "../" on tag pages if we ever use them.
+    Scripts for search; prefix is "" on root pages, "../" on tag pages if ever needed.
     """
     if not cfg.get("enable_search", True):
         return ""
-    lunr_basename = Path(cfg["lunr_js_path"]).name
-    search_basename = Path(cfg["search_js_path"]).name
-    return f'\n<script src="{prefix}{lunr_basename}"></script>\n<script src="{prefix}{search_basename}"></script>'
+    return (
+        f'\n<script src="{prefix}{LUNR_JS_FILENAME}"></script>'
+        f'\n<script src="{prefix}{SEARCH_JS_FILENAME}"></script>'
+    )
 
 
-def theme_script_html(prefix: str = ""):
+def theme_script_html(prefix: str = "") -> str:
     """
     Script tag for theme persistence (theme.js). prefix is "" or "../".
     """
-    return f'\n<script src="{prefix}theme.js"></script>'
+    return f'\n<script src="{prefix}{THEME_JS_FILENAME}"></script>'
 
 
 # -----------------------
 # Page renderers
 # -----------------------
 
-def render_year_page(year, years, entries, cfg, *, is_index=False):
+def render_year_page(year: str, years: list, entries: list, cfg: dict, *, is_index: bool = False) -> str:
     articles_html = "\n\n".join(render_entry(e, link_tags=True) for e in entries)
 
     site_title = cfg["site_title"]
@@ -456,13 +479,12 @@ def render_year_page(year, years, entries, cfg, *, is_index=False):
 """
 
 
-def render_on_this_day_page(today_label: str, years, entries, cfg):
+def render_on_this_day_page(today_label: str, years: list, entries: list, cfg: dict) -> str:
     """
     On this day: no search box.
     """
     site_title = cfg["site_title"]
     site_tagline = cfg["site_tagline"]
-
     page_title = f"{site_title} – On this day"
 
     # Sidebar years
@@ -534,14 +556,14 @@ def render_on_this_day_page(today_label: str, years, entries, cfg):
 
 <footer class="site-footer">
   {extra_footer_html}
-</footer>{search_scripts_html(cfg, prefix="")}{theme_script_html(prefix="")}
+</footer>{theme_script_html(prefix="")}
 
 </body>
 </html>
 """
 
 
-def render_tag_page(tag_name: str, tag_slug: str, years, entries, cfg):
+def render_tag_page(tag_name: str, tag_slug: str, years: list, entries: list, cfg: dict) -> str:
     """
     Tag page: no search UI.
     """
@@ -625,7 +647,7 @@ def render_tag_page(tag_name: str, tag_slug: str, years, entries, cfg):
 """
 
 
-def render_tag_index_page(tag_index: dict, years, cfg):
+def render_tag_index_page(tag_index: dict, years: list, cfg: dict) -> str:
     """
     Root-level tags.html: tag name + count + link to tag/<slug>.html
     """
@@ -723,26 +745,28 @@ def render_tag_index_page(tag_index: dict, years, cfg):
 # Static assets / RSS / search index
 # -----------------------
 
-def copy_css(css_src: Path, output_dir: Path):
-    if not css_src.exists():
-        print(f"WARNING: CSS file not found at {css_src}", file=sys.stderr)
+def copy_css(output_dir: Path):
+    src = BASE_DIR / CSS_FILENAME
+    if not src.exists():
+        print(f"WARNING: CSS file not found at {src}", file=sys.stderr)
         return
-    dest = output_dir / "style.css"
-    shutil.copy2(css_src, dest)
+    dest = output_dir / CSS_FILENAME
+    shutil.copy2(src, dest)
     print(f"Copied CSS to {dest}")
 
 
-def copy_search_js(cfg, output_dir: Path):
+def copy_search_js(cfg: dict, output_dir: Path):
     if not cfg.get("enable_search", True):
         return
-    for key in ("lunr_js_path", "search_js_path"):
-        src = (BASE_DIR / cfg[key]).resolve()
+
+    for filename in (LUNR_JS_FILENAME, SEARCH_JS_FILENAME):
+        src = BASE_DIR / filename
         if not src.exists():
             print(f"WARNING: Search JS file not found at {src}", file=sys.stderr)
             continue
-        dest = output_dir / src.name
+        dest = output_dir / filename
         shutil.copy2(src, dest)
-        print(f"Copied {src.name} to {dest}")
+        print(f"Copied {filename} to {dest}")
 
 
 def write_theme_js(output_dir: Path):
@@ -774,12 +798,13 @@ def write_theme_js(output_dir: Path):
   }
 })();
 """.strip() + "\n"
-    dest = output_dir / "theme.js"
+
+    dest = output_dir / THEME_JS_FILENAME
     dest.write_text(js, encoding="utf-8")
     print(f"Wrote {dest}")
 
 
-def generate_rss(latest_year: str, entries, cfg: dict, output_dir: Path):
+def generate_rss(latest_year: str, entries: list, cfg: dict, output_dir: Path):
     site_title = cfg["site_title"]
     site_tagline = cfg.get("site_tagline", "")
     site_url = (cfg.get("site_url") or "").rstrip("/")
@@ -866,7 +891,7 @@ def build_search_index(entries_by_year: dict, cfg: dict, output_dir: Path):
                 }
             )
 
-    index_path = output_dir / cfg["search_index_filename"]
+    index_path = output_dir / SEARCH_INDEX_FILENAME
     index_path.write_text(json.dumps(docs, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Wrote search index to {index_path}")
 
@@ -925,14 +950,18 @@ def build_tag_index_page(tag_index: dict, entries_by_year: dict, cfg: dict, outp
 # -----------------------
 
 def main():
-    cfg = load_config()
+    # 1. Figure out config path, project root, and load config
+    config_path = get_config_path_from_args()
+    project_root = config_path.parent
+    cfg = load_config(config_path)
 
-    content_root = (BASE_DIR / cfg["content_root"]).resolve()
-    output_dir = (BASE_DIR / cfg["output_dir"]).resolve()
-    css_src = (BASE_DIR / cfg["css_path"]).resolve()
+    # 2. Resolve content_root and output_dir relative to config file
+    content_root = (project_root / cfg["content_root"]).resolve()
+    output_dir = (project_root / cfg["output_dir"]).resolve()
 
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    # 3. Collect entries
     entries_by_year = collect_entries_by_year(
         content_root=content_root,
         order=cfg["order"],
@@ -948,12 +977,12 @@ def main():
 
     tag_index = build_tag_index(entries_by_year)
 
-    # static assets
-    copy_css(css_src, output_dir)
+    # 4. Static assets
+    copy_css(output_dir)
     copy_search_js(cfg, output_dir)
     write_theme_js(output_dir)
 
-    # year pages
+    # 5. Year pages
     for year in years:
         html_page = render_year_page(
             year=year,
@@ -966,7 +995,7 @@ def main():
         out_path.write_text(html_page, encoding="utf-8")
         print(f"Wrote {out_path}")
 
-    # index.html = latest year
+    # 6. index.html = latest year
     if cfg["latest_as_index"]:
         index_html = render_year_page(
             year=latest_year,
@@ -979,17 +1008,17 @@ def main():
         index_path.write_text(index_html, encoding="utf-8")
         print(f"Wrote {index_path}")
 
-    # rss for latest year
+    # 7. RSS for latest year
     generate_rss(latest_year, entries_by_year[latest_year], cfg, output_dir)
 
-    # on-this-day
+    # 8. On this day
     build_on_this_day(entries_by_year, cfg, output_dir)
 
-    # tags: per-tag pages + tags.html
+    # 9. Tags: per-tag pages + tags.html
     build_tag_pages(tag_index, entries_by_year, cfg, output_dir)
     build_tag_index_page(tag_index, entries_by_year, cfg, output_dir)
 
-    # lunr search index
+    # 10. Lunr search index
     build_search_index(entries_by_year, cfg, output_dir)
 
 
