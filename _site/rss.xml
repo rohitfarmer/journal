@@ -4,7 +4,14 @@
   <title>Rohit's Journal – 2025</title>
   <link>journal.rohitfarmer.com/2025.html</link>
   <description>Welcome to my online journal. The entries here are longer than a tweet, but smaller and less structured than a blog post. You can also follow my journal via <a href="https://journal.rohitfarmer.com/rss.xml">RSS</a>.</description>
-  <lastBuildDate>Wed, 03 Dec 2025 01:52:16 -0000</lastBuildDate>
+  <lastBuildDate>Thu, 04 Dec 2025 03:03:31 -0000</lastBuildDate>
+  <item>
+    <title>2025-12-03 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2025.html#2025-12-03</link>
+    <guid>journal.rohitfarmer.com/2025.html#2025-12-03</guid>
+    <pubDate>Wed, 03 Dec 2025 05:00:00 -0000</pubDate>
+    <description><![CDATA[<p>Yesterday, I posted on <a href="https://fosstodon.org/@rohitfarmer/115652095342331560">Mastodon</a> that I had ChatGPT create a static site generator for this journaling website, and someone asked why I did not use any of the existing generators. I did not set out to create an SSG. For this journaling website, I did not find the features in the generators that I already knew about, and it felt easier to make something of my own than to find and learning an existing one. Right now, there are hundreds of generators available, and it's hard to decide unless you already have a specific idea of which generator is best for your project. This could be both a power and a drawback of using LLMs, as for many tasks, people may find it easier to create something of their own than to use or collaborate on an existing solution. I have quite a few ideas for online projects that I can now build using ChatGPT, if not a complete product, at least a prototype.</p>]]></description>
+  </item>
   <item>
     <title>2025-12-02 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2025.html#2025-12-02</link>
