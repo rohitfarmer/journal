@@ -1,0 +1,3 @@
+[submodule "driftnotes"]
+	path = driftnotes
+	url = git@github.com:rohitfarmer/driftnotes.git
