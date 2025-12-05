@@ -1,0 +1,575 @@
+/* Rohit's Journal – site styles */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar (year bar) */
+
+.sidebar {
+  background: #111827;
+  color: #e5e7eb;
+  padding: 1.75rem 1.5rem;
+  width: 240px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.site-header {
+  margin-bottom: 1.75rem;
+}
+
+.site-title {
+  font-size: 1.3rem;
+  margin: 0 0 0.25rem;
+}
+
+.site-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-title a:hover {
+  text-decoration: none;
+}
+
+.site-tagline {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.year-nav-title {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+}
+
+.year-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.year-nav-list li {
+  margin-bottom: 0.25rem;
+}
+
+.year-link {
+  display: block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.year-link:hover {
+  background: #1f2937;
+  text-decoration: none;
+}
+
+.year-link.active {
+  background: #2563eb;
+  color: #f9fafb;
+}
+
+/* Main content area */
+
+.content {
+  flex: 1;
+  padding: 2rem 1.75rem 3rem;
+}
+
+/* Centered column for entries */
+
+.content-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Header above entries */
+
+.content-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.75rem;
+}
+
+.year-title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.content-subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Entries */
+
+.entry {
+  background: #ffffff;
+  border-radius: 0.9rem;
+  padding: 1.3rem 1.5rem;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04);
+  border: 1px solid #e5e7eb;
+}
+
+.entry-header {
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.entry-date {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.entry-date time {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Permalink icon next to date */
+
+.entry-permalink {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.entry-permalink:hover {
+  color: #4b5563;
+  text-decoration: none;
+}
+
+/* Body text */
+
+.entry-body p:first-child {
+  margin-top: 0.2rem;
+}
+
+.entry-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Lists */
+
+.entry-body ul,
+.entry-body ol {
+  margin-top: 0.4rem;
+  padding-left: 1.4rem;
+}
+
+.entry-body li {
+  margin-bottom: 0.15rem;
+}
+
+/* Images and captions */
+
+.entry-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* figures inserted by wrap_images_with_figures */
+
+.entry-body figure.entry-figure {
+  margin: 0.75rem auto;
+  text-align: center;
+}
+
+.entry-body figure.entry-figure img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+}
+
+.entry-body figure.entry-figure figcaption {
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Code blocks unchanged... */
+
+
+/* Images inside entries */
+
+.entry-body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.75rem auto;
+  border-radius: 0.5rem;
+}
+
+/* Optional: if you want a subtle frame around images */
+
+.entry-body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.75rem auto;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.12);
+}
+
+
+/* Code blocks */
+
+.entry-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.9em;
+  background: #f3f4f6;
+  padding: 0.05rem 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.entry-body pre {
+  background: #0b1120;
+  color: #e5e7eb;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.55rem;
+  overflow-x: auto;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    max-height: none;
+    border-bottom: 1px solid #1f2937;
+  }
+
+  .content {
+    padding: 1.25rem 1rem 2.5rem;
+  }
+
+  .content-inner {
+    max-width: 100%;
+  }
+}
+
+/* Footer */
+
+.site-footer {
+  margin-top: 2rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+.site-footer a {
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Dark mode toggle – CSS-only */
+
+.theme-toggle-checkbox {
+  position: absolute;
+  left: -9999px;
+}
+
+.theme-toggle-control {
+  margin-bottom: 1.5rem;
+}
+
+.theme-toggle-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: 1px solid #4b5563;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+.theme-toggle-icon {
+  font-size: 1rem;
+}
+
+.theme-toggle-text {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+
+/* Base light theme is what you already have.
+   Dark theme overrides when checkbox is checked. */
+
+#theme-toggle:checked ~ .layout {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+#theme-toggle:checked ~ .layout .sidebar {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+#theme-toggle:checked ~ .layout .site-tagline {
+  color: #9ca3af;
+}
+
+#theme-toggle:checked ~ .layout .year-link {
+  color: #e5e7eb;
+}
+
+#theme-toggle:checked ~ .layout .year-link.active {
+  background: #4b5563;
+}
+
+#theme-toggle:checked ~ .layout .content {
+  background: #020617;
+}
+
+#theme-toggle:checked ~ .layout .entry {
+  background: #020617;
+  border-color: #1f2937;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+#theme-toggle:checked ~ .layout .entry-date {
+  color: #e5e7eb;
+}
+
+#theme-toggle:checked ~ .layout .entry-body code {
+  background: #111827;
+}
+
+#theme-toggle:checked ~ .layout .entry-body pre {
+  background: #020617;
+}
+
+#theme-toggle:checked ~ .layout .site-footer {
+  color: #9ca3af;
+}
+
+/* Search */
+
+.search-section {
+  margin: 1rem 0 1.5rem;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.search-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.search-input {
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.4);
+}
+
+.search-results {
+  margin-top: 0.7rem;
+}
+
+.search-results-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-result {
+  padding: 0.4rem 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.search-result-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.search-result-snippet {
+  margin: 0.15rem 0 0;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+/* Dark theme tweaks for search */
+
+#theme-toggle:checked ~ .layout .search-input {
+  background: #020617;
+  color: #e5e7eb;
+  border-color: #374151;
+}
+
+#theme-toggle:checked ~ .layout .search-result {
+  border-top-color: #1f2937;
+}
+
+#theme-toggle:checked ~ .layout .search-result-snippet {
+  color: #9ca3af;
+}
+
+.entry-tags {
+  list-style: none;
+  margin: 0 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.entry-tags li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Tag pills */
+
+.entry-tags {
+  list-style: none;
+  margin: 0 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.entry-tag {
+  font-size: 0.75rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* Dark mode tweaks for tags */
+
+#theme-toggle:checked ~ .layout .entry-tag {
+  background: #111827;
+  color: #e5e7eb;
+}
+
+/* Sidebar extra links (On this day) */
+
+.sidebar-extra-links {
+  margin: 0 0 1rem;
+}
+
+.sidebar-link {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: 1px solid #4b5563;
+  color: #e5e7eb;
+}
+
+.sidebar-link:hover {
+  background: #1f2937;
+  text-decoration: none;
+}
+
+.sidebar-link.active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #f9fafb;
+}
+
+/* Dark mode tweak */
+
+#theme-toggle:checked ~ .layout .sidebar-link {
+  border-color: #6b7280;
+}
+
+/* both link and span share the same pill look */
+.entry-tag {
+  font-size: 0.75rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: #e5e7eb;
+  color: #374151;
+  text-decoration: none;
+}
+
+.entry-tag:hover {
+  text-decoration: none;
+  background: #d1d5db;
+}
+
+/* Dark mode tweaks */
+#theme-toggle:checked ~ .layout .entry-tag {
+  background: #111827;
+  color: #e5e7eb;
+}
