@@ -1,4 +1,4 @@
-/* Rohit's Journal – site styles */
+/* ========= Base reset ========= */
 
 *,
 *::before,
@@ -7,19 +7,22 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 18px;
 }
+
+/* ========= Typography & base colors ========= */
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f3f4f6;
-  color: #111827;
+  font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+  background: #F5F1E8; /* warm paper */
+  color: #2B2620;      /* ink brownish */
   line-height: 1.6;
 }
 
+/* Links: subtle ink brown */
 a {
-  color: #2563eb;
+  color: #7A4B2E;
   text-decoration: none;
 }
 
@@ -27,18 +30,18 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Layout */
+/* ========= Layout ========= */
 
 .layout {
   display: flex;
   min-height: 100vh;
 }
 
-/* Sidebar (year bar) */
+/* ========= Sidebar (year bar) ========= */
 
 .sidebar {
-  background: #111827;
-  color: #e5e7eb;
+  background: #262421;  /* dark warm neutral */
+  color: #F2E7D8;
   padding: 1.75rem 1.5rem;
   width: 240px;
   flex-shrink: 0;
@@ -70,7 +73,7 @@ a:hover {
 .site-tagline {
   margin: 0;
   font-size: 0.9rem;
-  color: #9ca3af;
+  color: #C9BEAA; /* muted warm */
 }
 
 .year-nav-title {
@@ -78,7 +81,7 @@ a:hover {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #9ca3af;
+  color: #C9BEAA;
 }
 
 .year-nav-list {
@@ -96,20 +99,20 @@ a:hover {
   padding: 0.35rem 0.7rem;
   border-radius: 999px;
   font-size: 0.9rem;
-  color: #e5e7eb;
+  color: #F2E7D8;
 }
 
 .year-link:hover {
-  background: #1f2937;
+  background: #35322D;
   text-decoration: none;
 }
 
 .year-link.active {
-  background: #2563eb;
-  color: #f9fafb;
+  background: #8C5A3C; /* warm accent */
+  color: #FDF9F2;
 }
 
-/* Main content area */
+/* ========= Main content area ========= */
 
 .content {
   flex: 1;
@@ -127,7 +130,7 @@ a:hover {
 
 .content-header {
   margin-bottom: 1.5rem;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #DFD2C0;
   padding-bottom: 0.75rem;
 }
 
@@ -140,18 +143,19 @@ a:hover {
 .content-subtitle {
   margin: 0.35rem 0 0;
   font-size: 0.9rem;
-  color: #6b7280;
+  color: #7C7060;
 }
 
-/* Entries */
+/* ========= Entries ========= */
 
 .entry {
-  background: #ffffff;
+  font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+  background: #FBF7ED; /* lighter paper card */
   border-radius: 0.9rem;
   padding: 1.3rem 1.5rem;
   margin-bottom: 1.1rem;
-  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04);
-  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 4px rgba(33, 24, 14, 0.08);
+  border: 1px solid #E1D5C2;
 }
 
 .entry-header {
@@ -162,10 +166,11 @@ a:hover {
 }
 
 .entry-date {
+  font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
   margin: 0;
   font-size: 1rem;
   font-weight: 500;
-  color: #4b5563;
+  color: #6C5E4F;
 }
 
 .entry-date time {
@@ -176,12 +181,12 @@ a:hover {
 
 .entry-permalink {
   font-size: 0.8rem;
-  color: #9ca3af;
+  color: #B0A18E;
   text-decoration: none;
 }
 
 .entry-permalink:hover {
-  color: #4b5563;
+  color: #6C5E4F;
   text-decoration: none;
 }
 
@@ -207,7 +212,7 @@ a:hover {
   margin-bottom: 0.15rem;
 }
 
-/* Images and captions */
+/* ========= Images and captions ========= */
 
 .entry-body img {
   max-width: 100%;
@@ -228,15 +233,13 @@ a:hover {
 }
 
 .entry-body figure.entry-figure figcaption {
+  font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
   margin-top: 0.35rem;
   font-size: 0.85rem;
-  color: #6b7280;
+  color: #7C7060;
 }
 
-/* Code blocks unchanged... */
-
-
-/* Images inside entries */
+/* Images inside entries – subtle frame */
 
 .entry-body img {
   max-width: 100%;
@@ -244,41 +247,30 @@ a:hover {
   display: block;
   margin: 0.75rem auto;
   border-radius: 0.5rem;
+  border: 1px solid #E1D5C2;
+  box-shadow: 0 1px 3px rgba(33, 24, 14, 0.12);
 }
 
-/* Optional: if you want a subtle frame around images */
-
-.entry-body img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0.75rem auto;
-  border-radius: 0.5rem;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.12);
-}
-
-
-/* Code blocks */
+/* ========= Code blocks ========= */
 
 .entry-body code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 0.9em;
-  background: #f3f4f6;
+  background: #EDE2D0;
   padding: 0.05rem 0.25rem;
   border-radius: 0.25rem;
 }
 
 .entry-body pre {
-  background: #0b1120;
-  color: #e5e7eb;
+  background: #2B2620;  /* dark ink panel */
+  color: #F2E7D8;
   padding: 0.75rem 0.9rem;
   border-radius: 0.55rem;
   overflow-x: auto;
   font-size: 0.85rem;
 }
 
-/* Responsive */
+/* ========= Responsive ========= */
 
 @media (max-width: 900px) {
   .layout {
@@ -289,7 +281,7 @@ a:hover {
     position: static;
     width: 100%;
     max-height: none;
-    border-bottom: 1px solid #1f2937;
+    border-bottom: 1px solid #3C3730;
   }
 
   .content {
@@ -301,14 +293,14 @@ a:hover {
   }
 }
 
-/* Footer */
+/* ========= Footer ========= */
 
 .site-footer {
   margin-top: 2rem;
   padding: 1.5rem 1rem;
   text-align: center;
   font-size: 0.9rem;
-  color: #6b7280;
+  color: #7C7060;
 }
 
 .site-footer p {
@@ -316,7 +308,7 @@ a:hover {
 }
 
 .site-footer a {
-  color: #4b5563;
+  color: #6C5E4F;
   text-decoration: none;
 }
 
@@ -324,7 +316,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Dark mode toggle – CSS-only */
+/* ========= Dark mode toggle – CSS-only ========= */
 
 .theme-toggle-checkbox {
   position: absolute;
@@ -342,8 +334,8 @@ a:hover {
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
   font-size: 0.85rem;
-  border: 1px solid #4b5563;
-  color: #e5e7eb;
+  border: 1px solid #7B6A58;
+  color: #F2E7D8;
   cursor: pointer;
 }
 
@@ -357,59 +349,58 @@ a:hover {
   letter-spacing: 0.08em;
 }
 
-
-/* Base light theme is what you already have.
-   Dark theme overrides when checkbox is checked. */
+/* ========= Dark theme overrides ========= */
+/* Think "ink on dark paper" rather than neon on black */
 
 #theme-toggle:checked ~ .layout {
-  background: #020617;
-  color: #e5e7eb;
+  background: #15130F;
+  color: #E5DAC7;
 }
 
 #theme-toggle:checked ~ .layout .sidebar {
-  background: #020617;
-  color: #e5e7eb;
+  background: #11100D;
+  color: #E5DAC7;
 }
 
 #theme-toggle:checked ~ .layout .site-tagline {
-  color: #9ca3af;
+  color: #B8AA93;
 }
 
 #theme-toggle:checked ~ .layout .year-link {
-  color: #e5e7eb;
+  color: #E5DAC7;
 }
 
 #theme-toggle:checked ~ .layout .year-link.active {
-  background: #4b5563;
+  background: #A47346;
 }
 
 #theme-toggle:checked ~ .layout .content {
-  background: #020617;
+  background: #15130F;
 }
 
 #theme-toggle:checked ~ .layout .entry {
-  background: #020617;
-  border-color: #1f2937;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  background: #1E1B16;
+  border-color: #3A3327;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 #theme-toggle:checked ~ .layout .entry-date {
-  color: #e5e7eb;
+  color: #E5DAC7;
 }
 
 #theme-toggle:checked ~ .layout .entry-body code {
-  background: #111827;
+  background: #252118;
 }
 
 #theme-toggle:checked ~ .layout .entry-body pre {
-  background: #020617;
+  background: #15130F;
 }
 
 #theme-toggle:checked ~ .layout .site-footer {
-  color: #9ca3af;
+  color: #BFAF96;
 }
 
-/* Search */
+/* ========= Search ========= */
 
 .search-section {
   margin: 1rem 0 1.5rem;
@@ -423,20 +414,21 @@ a:hover {
 
 .search-label {
   font-size: 0.85rem;
-  color: #6b7280;
+  color: #7C7060;
 }
 
 .search-input {
   padding: 0.4rem 0.6rem;
   border-radius: 0.5rem;
-  border: 1px solid #d1d5db;
+  border: 1px solid #D5C7B2;
   font-size: 0.9rem;
+  background: #FBF7ED;
 }
 
 .search-input:focus {
   outline: none;
-  border-color: #2563eb;
-  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.4);
+  border-color: #A96A3D;
+  box-shadow: 0 0 0 1px rgba(169, 106, 61, 0.35);
 }
 
 .search-results {
@@ -451,7 +443,7 @@ a:hover {
 
 .search-result {
   padding: 0.4rem 0;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid #E1D5C2;
 }
 
 .search-result-title {
@@ -462,26 +454,29 @@ a:hover {
 .search-result-snippet {
   margin: 0.15rem 0 0;
   font-size: 0.85rem;
-  color: #4b5563;
+  color: #6C5E4F;
 }
 
 /* Dark theme tweaks for search */
 
 #theme-toggle:checked ~ .layout .search-input {
-  background: #020617;
-  color: #e5e7eb;
-  border-color: #374151;
+  background: #15130F;
+  color: #E5DAC7;
+  border-color: #3C3429;
 }
 
 #theme-toggle:checked ~ .layout .search-result {
-  border-top-color: #1f2937;
+  border-top-color: #3A3327;
 }
 
 #theme-toggle:checked ~ .layout .search-result-snippet {
-  color: #9ca3af;
+  color: #C9BEAA;
 }
 
+/* ========= Tags ========= */
+
 .entry-tags {
+  font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
   list-style: none;
   margin: 0 0 0 1rem;
   padding: 0;
@@ -495,30 +490,20 @@ a:hover {
   padding: 0;
 }
 
-/* Tag pills */
-
-.entry-tags {
-  list-style: none;
-  margin: 0 0 0 1rem;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-}
+/* Tag pills – light */
 
 .entry-tag {
   font-size: 0.75rem;
   padding: 0.1rem 0.45rem;
   border-radius: 999px;
-  background: #e5e7eb;
-  color: #374151;
+  background: #E5D7C4;
+  color: #4F3F32;
+  text-decoration: none;
 }
 
-/* Dark mode tweaks for tags */
-
-#theme-toggle:checked ~ .layout .entry-tag {
-  background: #111827;
-  color: #e5e7eb;
+.entry-tag:hover {
+  text-decoration: none;
+  background: #D5C7B2;
 }
 
 /* Sidebar extra links (On this day) */
@@ -532,44 +517,105 @@ a:hover {
   padding: 0.25rem 0.7rem;
   border-radius: 999px;
   font-size: 0.85rem;
-  border: 1px solid #4b5563;
-  color: #e5e7eb;
+  border: 1px solid #7B6A58;
+  color: #F2E7D8;
 }
 
 .sidebar-link:hover {
-  background: #1f2937;
+  background: #35322D;
   text-decoration: none;
 }
 
 .sidebar-link.active {
-  background: #2563eb;
-  border-color: #2563eb;
-  color: #f9fafb;
-}
-
-/* Dark mode tweak */
-
-#theme-toggle:checked ~ .layout .sidebar-link {
-  border-color: #6b7280;
-}
-
-/* both link and span share the same pill look */
-.entry-tag {
-  font-size: 0.75rem;
-  padding: 0.1rem 0.45rem;
-  border-radius: 999px;
-  background: #e5e7eb;
-  color: #374151;
-  text-decoration: none;
-}
-
-.entry-tag:hover {
-  text-decoration: none;
-  background: #d1d5db;
+  background: #8C5A3C;
+  border-color: #8C5A3C;
+  color: #FDF9F2;
 }
 
 /* Dark mode tweaks */
+
+#theme-toggle:checked ~ .layout .sidebar-link {
+  border-color: #8E7A63;
+}
+
 #theme-toggle:checked ~ .layout .entry-tag {
-  background: #111827;
-  color: #e5e7eb;
+  background: #252118;
+  color: #E5DAC7;
+}
+
+/* ===== Year nav hamburger toggle (mobile) ===== */
+
+/* Hide the actual checkbox */
+.year-toggle-checkbox {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Hidden by default (desktop) */
+.year-toggle-label {
+  display: none;
+}
+
+/* Base style for the pill-like toggle button */
+.year-toggle-label {
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid #7B6A58; /* match your sidebar accent */
+  color: #F2E7D8;
+  font-size: 0.85rem;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Hamburger icon: three lines */
+.year-toggle-burger {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.year-toggle-burger span {
+  width: 16px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor; /* uses the label's text color */
+}
+
+/* Small text next to the hamburger */
+.year-toggle-text {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ----- Mobile behavior ----- */
+@media (max-width: 900px) {
+  /* Show the toggle button only on small screens */
+  .year-toggle-label {
+    display: inline-flex;
+  }
+
+  /* When NOT checked, hide the whole year nav (title + list) */
+  #year-toggle:not(:checked) ~ .year-nav {
+    display: none;
+  }
+
+  /* When checked, show it */
+  #year-toggle:checked ~ .year-nav {
+    display: block;
+  }
+}
+
+/* ----- Desktop behavior ----- */
+@media (min-width: 901px) {
+  /* No hamburger on desktop; nav is always visible */
+  .year-toggle-label {
+    display: none;
+  }
+
+  .year-nav {
+    display: block;
+  }
 }
