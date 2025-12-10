@@ -180,15 +180,47 @@ a:hover {
 /* Permalink icon next to date */
 
 .entry-permalink {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #B0A18E;
   text-decoration: none;
+  margin-left: 0.25rem;
 }
 
 .entry-permalink:hover {
   color: #6C5E4F;
   text-decoration: none;
 }
+
+/* ===== Copy-to-clipboard toast ===== */
+
+.copy-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.75rem;
+  transform: translateX(-50%) translateY(8px);
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(38, 36, 33, 0.96);
+  color: #F2E7D8;
+  font-size: 0.85rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.copy-toast.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Dark theme tweak (optional but safe) */
+#theme-toggle:checked ~ .layout ~ .copy-toast {
+  background: rgba(12, 11, 9, 0.96);
+  color: #E5DAC7;
+}
+
 
 /* Body text */
 
