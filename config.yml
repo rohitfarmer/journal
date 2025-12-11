@@ -4,6 +4,7 @@ site_url: "journal.rohitfarmer.com"
 resources:
   - CNAME
   - .nojekyll
+  - favicon.ico
 
 # Where the year folders live (relative to this config)
 content_root: "contents"
