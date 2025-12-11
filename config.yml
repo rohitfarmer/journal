@@ -22,6 +22,7 @@ extra_head: |
     <meta name="author" content="Rohit Farmer">
     <meta name="robots" content="noindex">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="48f937e2-37f5-4bbc-b023-5953e387f0c9"></script>
+    <link href="favicon.ico" rel="icon">
 
 extra_footer: |
     <p>© 2025 Rohit Farmer — All rights reserved.</p>
