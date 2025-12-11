@@ -6,7 +6,7 @@ resources:
   - .nojekyll
 
 # Where the year folders live (relative to this config)
-content_root: "content"
+content_root: "contents"
 
 # Where to write the generated HTML (relative to this config)
 output_dir: "docs"
@@ -20,6 +20,7 @@ include_drafts: false        # include entries with draft: true or not
 extra_head: |
     <meta name="author" content="Rohit Farmer">
     <meta name="robots" content="noindex">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="48f937e2-37f5-4bbc-b023-5953e387f0c9"></script>
 
 extra_footer: |
     <p>© 2025 Rohit Farmer — All rights reserved.</p>
