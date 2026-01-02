@@ -1,4 +1,8 @@
-/* ========= Base reset ========= */
+/* =========================================================
+   Rohit's Journal – warm, traditional, elegant theme
+   ========================================================= */
+
+/* ---------- Reset ---------- */
 
 *,
 *::before,
@@ -10,17 +14,14 @@ html {
   font-size: 18px;
 }
 
-/* ========= Typography & base colors ========= */
-
 body {
   margin: 0;
-  font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+  font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
   background: #F5F1E8; /* warm paper */
-  color: #2B2620;      /* ink brownish */
+  color: #2B2620;      /* ink */
   line-height: 1.6;
 }
 
-/* Links: subtle ink brown */
 a {
   color: #7A4B2E;
   text-decoration: none;
@@ -30,17 +31,53 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ========= Layout ========= */
+/* ---------- Layout ---------- */
 
 .layout {
   display: flex;
   min-height: 100vh;
 }
 
-/* ========= Sidebar (year bar) ========= */
+/* Flexbox overflow fix (prevents media from pushing wider than the column) */
+.content,
+.content-inner,
+.entry,
+.entry-body {
+  min-width: 0;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem 1.75rem 3rem;
+}
+
+.content-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.content-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #DFD2C0;
+  padding-bottom: 0.75rem;
+}
+
+.year-title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.content-subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  color: #7C7060;
+}
+
+/* ---------- Sidebar ---------- */
 
 .sidebar {
-  background: #262421;  /* dark warm neutral */
+  background: #262421;
   color: #F2E7D8;
   padding: 1.75rem 1.5rem;
   width: 240px;
@@ -73,7 +110,7 @@ a:hover {
 .site-tagline {
   margin: 0;
   font-size: 0.9rem;
-  color: #C9BEAA; /* muted warm */
+  color: #C9BEAA;
 }
 
 .year-nav-title {
@@ -108,247 +145,36 @@ a:hover {
 }
 
 .year-link.active {
-  background: #8C5A3C; /* warm accent */
+  background: #8C5A3C;
   color: #FDF9F2;
 }
 
-/* ========= Main content area ========= */
-
-.content {
-  flex: 1;
-  padding: 2rem 1.75rem 3rem;
+/* Sidebar extra links */
+.sidebar-extra-links {
+  margin: 0 0 1rem;
 }
 
-/* Centered column for entries */
-
-.content-inner {
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-/* Header above entries */
-
-.content-header {
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid #DFD2C0;
-  padding-bottom: 0.75rem;
-}
-
-.year-title {
-  margin: 0;
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
-.content-subtitle {
-  margin: 0.35rem 0 0;
-  font-size: 0.9rem;
-  color: #7C7060;
-}
-
-/* ========= Entries ========= */
-
-.entry {
-  font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-  background: #FBF7ED; /* lighter paper card */
-  border-radius: 0.9rem;
-  padding: 1.3rem 1.5rem;
-  margin-bottom: 1.1rem;
-  box-shadow: 0 1px 4px rgba(33, 24, 14, 0.08);
-  border: 1px solid #E1D5C2;
-}
-
-.entry-header {
-  margin-bottom: 0.4rem;
-  display: flex;
-  align-items: baseline;
-  gap: 0.4rem;
-}
-
-.entry-date {
-  font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #6C5E4F;
-}
-
-.entry-date time {
-  font-variant-numeric: tabular-nums;
-}
-
-/* Permalink icon next to date */
-
-.entry-permalink {
-  font-size: 0.9rem;
-  color: #B0A18E;
-  text-decoration: none;
-  margin-left: 0.25rem;
-}
-
-.entry-permalink:hover {
-  color: #6C5E4F;
-  text-decoration: none;
-}
-
-/* ===== Copy-to-clipboard toast ===== */
-
-.copy-toast {
-  position: fixed;
-  left: 50%;
-  bottom: 1.75rem;
-  transform: translateX(-50%) translateY(8px);
-  padding: 0.4rem 0.9rem;
+.sidebar-link {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
   border-radius: 999px;
-  background: rgba(38, 36, 33, 0.96);
+  font-size: 0.85rem;
+  border: 1px solid #7B6A58;
   color: #F2E7D8;
-  font-size: 0.85rem;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  z-index: 1000;
 }
 
-.copy-toast.visible {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-/* Dark theme tweak (optional but safe) */
-#theme-toggle:checked ~ .layout ~ .copy-toast {
-  background: rgba(12, 11, 9, 0.96);
-  color: #E5DAC7;
-}
-
-
-/* Body text */
-
-.entry-body p:first-child {
-  margin-top: 0.2rem;
-}
-
-.entry-body p:last-child {
-  margin-bottom: 0;
-}
-
-/* Lists */
-
-.entry-body ul,
-.entry-body ol {
-  margin-top: 0.4rem;
-  padding-left: 1.4rem;
-}
-
-.entry-body li {
-  margin-bottom: 0.15rem;
-}
-
-/* ========= Images and captions ========= */
-
-.entry-body img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* figures inserted by wrap_images_with_figures */
-
-.entry-body figure.entry-figure {
-  margin: 0.75rem auto;
-  text-align: center;
-}
-
-.entry-body figure.entry-figure img {
-  display: block;
-  margin: 0 auto;
-  border-radius: 0.5rem;
-}
-
-.entry-body figure.entry-figure figcaption {
-  font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-  margin-top: 0.35rem;
-  font-size: 0.85rem;
-  color: #7C7060;
-}
-
-/* Images inside entries – subtle frame */
-
-.entry-body img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0.75rem auto;
-  border-radius: 0.5rem;
-  border: 1px solid #E1D5C2;
-  box-shadow: 0 1px 3px rgba(33, 24, 14, 0.12);
-}
-
-/* ========= Code blocks ========= */
-
-.entry-body code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.9em;
-  background: #EDE2D0;
-  padding: 0.05rem 0.25rem;
-  border-radius: 0.25rem;
-}
-
-.entry-body pre {
-  background: #2B2620;  /* dark ink panel */
-  color: #F2E7D8;
-  padding: 0.75rem 0.9rem;
-  border-radius: 0.55rem;
-  overflow-x: auto;
-  font-size: 0.85rem;
-}
-
-/* ========= Responsive ========= */
-
-@media (max-width: 900px) {
-  .layout {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    position: static;
-    width: 100%;
-    max-height: none;
-    border-bottom: 1px solid #3C3730;
-  }
-
-  .content {
-    padding: 1.25rem 1rem 2.5rem;
-  }
-
-  .content-inner {
-    max-width: 100%;
-  }
-}
-
-/* ========= Footer ========= */
-
-.site-footer {
-  margin-top: 2rem;
-  padding: 1.5rem 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #7C7060;
-}
-
-.site-footer p {
-  margin: 0.25rem 0;
-}
-
-.site-footer a {
-  color: #6C5E4F;
+.sidebar-link:hover {
+  background: #35322D;
   text-decoration: none;
 }
 
-.site-footer a:hover {
-  text-decoration: underline;
+.sidebar-link.active {
+  background: #8C5A3C;
+  border-color: #8C5A3C;
+  color: #FDF9F2;
 }
 
-/* ========= Dark mode toggle – CSS-only ========= */
+/* ---------- Theme toggle pill ---------- */
 
 .theme-toggle-checkbox {
   position: absolute;
@@ -381,58 +207,130 @@ a:hover {
   letter-spacing: 0.08em;
 }
 
-/* ========= Dark theme overrides ========= */
-/* Think "ink on dark paper" rather than neon on black */
+/* ---------- Entries ---------- */
 
-#theme-toggle:checked ~ .layout {
-  background: #15130F;
-  color: #E5DAC7;
+.entry {
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+  background: #FBF7ED;
+  border-radius: 0.9rem;
+  padding: 1.3rem 1.5rem;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 1px 4px rgba(33, 24, 14, 0.08);
+  border: 1px solid #E1D5C2;
 }
 
-#theme-toggle:checked ~ .layout .sidebar {
-  background: #11100D;
-  color: #E5DAC7;
+.entry-header {
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  flex-wrap: wrap; /* protects on narrow screens */
 }
 
-#theme-toggle:checked ~ .layout .site-tagline {
-  color: #B8AA93;
+.entry-date {
+  font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6C5E4F;
 }
 
-#theme-toggle:checked ~ .layout .year-link {
-  color: #E5DAC7;
+.entry-date time {
+  font-variant-numeric: tabular-nums;
 }
 
-#theme-toggle:checked ~ .layout .year-link.active {
-  background: #A47346;
+/* Permalink */
+.entry-permalink {
+  font-size: 0.95rem;
+  color: #B0A18E;
+  text-decoration: none;
+  margin-left: 0.25rem;
 }
 
-#theme-toggle:checked ~ .layout .content {
-  background: #15130F;
+.entry-permalink:hover {
+  color: #6C5E4F;
+  text-decoration: none;
 }
 
-#theme-toggle:checked ~ .layout .entry {
-  background: #1E1B16;
-  border-color: #3A3327;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+/* Body spacing */
+.entry-body p:first-child {
+  margin-top: 0.2rem;
 }
 
-#theme-toggle:checked ~ .layout .entry-date {
-  color: #E5DAC7;
+.entry-body p:last-child {
+  margin-bottom: 0;
 }
 
-#theme-toggle:checked ~ .layout .entry-body code {
-  background: #252118;
+/* Lists */
+.entry-body ul,
+.entry-body ol {
+  margin-top: 0.4rem;
+  padding-left: 1.4rem;
 }
 
-#theme-toggle:checked ~ .layout .entry-body pre {
-  background: #15130F;
+.entry-body li {
+  margin-bottom: 0.15rem;
 }
 
-#theme-toggle:checked ~ .layout .site-footer {
-  color: #BFAF96;
+/* ---------- Media (images + video) ---------- */
+
+/* Figures inserted by wrap_images_with_figures */
+.entry-body figure.entry-figure {
+  margin: 0.75rem auto;
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
 }
 
-/* ========= Search ========= */
+/* Images */
+.entry-body img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0.75rem auto;
+  border-radius: 0.5rem;
+  border: 1px solid #E1D5C2;
+  box-shadow: 0 1px 3px rgba(33, 24, 14, 0.12);
+}
+
+/* Videos (fix overflow) */
+.entry-body video,
+.entry-body video.entry-video {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Captions */
+.entry-body figure.entry-figure figcaption {
+  font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  color: #7C7060;
+}
+
+/* ---------- Code ---------- */
+
+.entry-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.9em;
+  background: #EDE2D0;
+  padding: 0.05rem 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.entry-body pre {
+  background: #2B2620;
+  color: #F2E7D8;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.55rem;
+  overflow-x: auto;
+  font-size: 0.85rem;
+}
+
+/* ---------- Search ---------- */
 
 .search-section {
   margin: 1rem 0 1.5rem;
@@ -489,7 +387,134 @@ a:hover {
   color: #6C5E4F;
 }
 
-/* Dark theme tweaks for search */
+/* ---------- Tags ---------- */
+
+.entry-tags {
+  font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
+  list-style: none;
+  margin: 0 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.entry-tag {
+  font-size: 0.75rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: #E5D7C4;
+  color: #4F3F32;
+  text-decoration: none;
+}
+
+.entry-tag:hover {
+  background: #D5C7B2;
+  text-decoration: none;
+}
+
+/* ---------- Copy toast ---------- */
+
+.copy-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.75rem;
+  transform: translateX(-50%) translateY(8px);
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(38, 36, 33, 0.96);
+  color: #F2E7D8;
+  font-size: 0.85rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.copy-toast.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Dark theme tweak for toast (safe selector) */
+#theme-toggle:checked ~ .layout ~ .copy-toast {
+  background: rgba(12, 11, 9, 0.96);
+  color: #E5DAC7;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  margin-top: 2rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #7C7060;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+.site-footer a {
+  color: #6C5E4F;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Dark theme overrides ---------- */
+
+#theme-toggle:checked ~ .layout {
+  background: #15130F;
+  color: #E5DAC7;
+}
+
+#theme-toggle:checked ~ .layout .sidebar {
+  background: #11100D;
+  color: #E5DAC7;
+}
+
+#theme-toggle:checked ~ .layout .site-tagline {
+  color: #B8AA93;
+}
+
+#theme-toggle:checked ~ .layout .year-link {
+  color: #E5DAC7;
+}
+
+#theme-toggle:checked ~ .layout .year-link.active {
+  background: #A47346;
+}
+
+#theme-toggle:checked ~ .layout .content {
+  background: #15130F;
+}
+
+#theme-toggle:checked ~ .layout .entry {
+  background: #1E1B16;
+  border-color: #3A3327;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+#theme-toggle:checked ~ .layout .entry-date {
+  color: #E5DAC7;
+}
+
+#theme-toggle:checked ~ .layout .entry-body code {
+  background: #252118;
+}
+
+#theme-toggle:checked ~ .layout .entry-body pre {
+  background: #15130F;
+}
+
+#theme-toggle:checked ~ .layout .site-footer {
+  color: #BFAF96;
+}
 
 #theme-toggle:checked ~ .layout .search-input {
   background: #15130F;
@@ -505,67 +530,6 @@ a:hover {
   color: #C9BEAA;
 }
 
-/* ========= Tags ========= */
-
-.entry-tags {
-  font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-  list-style: none;
-  margin: 0 0 0 1rem;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-}
-
-.entry-tags li {
-  margin: 0;
-  padding: 0;
-}
-
-/* Tag pills – light */
-
-.entry-tag {
-  font-size: 0.75rem;
-  padding: 0.1rem 0.45rem;
-  border-radius: 999px;
-  background: #E5D7C4;
-  color: #4F3F32;
-  text-decoration: none;
-}
-
-.entry-tag:hover {
-  text-decoration: none;
-  background: #D5C7B2;
-}
-
-/* Sidebar extra links (On this day) */
-
-.sidebar-extra-links {
-  margin: 0 0 1rem;
-}
-
-.sidebar-link {
-  display: inline-block;
-  padding: 0.25rem 0.7rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  border: 1px solid #7B6A58;
-  color: #F2E7D8;
-}
-
-.sidebar-link:hover {
-  background: #35322D;
-  text-decoration: none;
-}
-
-.sidebar-link.active {
-  background: #8C5A3C;
-  border-color: #8C5A3C;
-  color: #FDF9F2;
-}
-
-/* Dark mode tweaks */
-
 #theme-toggle:checked ~ .layout .sidebar-link {
   border-color: #8E7A63;
 }
@@ -575,25 +539,23 @@ a:hover {
   color: #E5DAC7;
 }
 
-/* ===== Year nav hamburger toggle (mobile) ===== */
+/* ---------- Year nav hamburger toggle (mobile) ---------- */
 
-/* Hide the actual checkbox */
 .year-toggle-checkbox {
   position: absolute;
   left: -9999px;
 }
 
-/* Hidden by default (desktop) */
+/* Desktop default: nav visible, burger hidden */
 .year-toggle-label {
   display: none;
 }
 
-/* Base style for the pill-like toggle button */
 .year-toggle-label {
   margin-bottom: 0.75rem;
   padding: 0.35rem 0.75rem;
   border-radius: 999px;
-  border: 1px solid #7B6A58; /* match your sidebar accent */
+  border: 1px solid #7B6A58;
   color: #F2E7D8;
   font-size: 0.85rem;
   cursor: pointer;
@@ -601,7 +563,6 @@ a:hover {
   gap: 0.5rem;
 }
 
-/* Hamburger icon: three lines */
 .year-toggle-burger {
   display: inline-flex;
   flex-direction: column;
@@ -612,37 +573,51 @@ a:hover {
   width: 16px;
   height: 2px;
   border-radius: 999px;
-  background: currentColor; /* uses the label's text color */
+  background: currentColor;
 }
 
-/* Small text next to the hamburger */
 .year-toggle-text {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
-/* ----- Mobile behavior ----- */
+/* Mobile behavior */
 @media (max-width: 900px) {
-  /* Show the toggle button only on small screens */
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    max-height: none;
+    border-bottom: 1px solid #3C3730;
+  }
+
+  .content {
+    padding: 1.25rem 1rem 2.5rem;
+  }
+
+  .content-inner {
+    max-width: 100%;
+  }
+
   .year-toggle-label {
     display: inline-flex;
   }
 
-  /* When NOT checked, hide the whole year nav (title + list) */
   #year-toggle:not(:checked) ~ .year-nav {
     display: none;
   }
 
-  /* When checked, show it */
   #year-toggle:checked ~ .year-nav {
     display: block;
   }
 }
 
-/* ----- Desktop behavior ----- */
+/* Desktop behavior */
 @media (min-width: 901px) {
-  /* No hamburger on desktop; nav is always visible */
   .year-toggle-label {
     display: none;
   }
@@ -651,3 +626,4 @@ a:hover {
     display: block;
   }
 }
+
