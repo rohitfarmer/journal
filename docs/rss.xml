@@ -4,7 +4,15 @@
   <title>Rohit's Journal – 2026</title>
   <link>journal.rohitfarmer.com/2026.html</link>
   <description>Welcome to my online journal. The entries here are longer than a tweet, but less structured than a blog post. You can also follow my journal via <a href="https://journal.rohitfarmer.com/rss.xml">RSS</a>. Email for comments: rohit@rohitfarmer.com</description>
-  <lastBuildDate>Fri, 02 Jan 2026 21:51:37 -0000</lastBuildDate>
+  <lastBuildDate>Sun, 04 Jan 2026 02:54:25 -0000</lastBuildDate>
+  <item>
+    <title>2026-01-03 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2026.html#2026-01-03</link>
+    <guid>journal.rohitfarmer.com/2026.html#2026-01-03</guid>
+    <pubDate>Sat, 03 Jan 2026 05:00:00 -0000</pubDate>
+    <description><![CDATA[<p>I am having home computer issues. All my home laptops are old now, and one by one, they're dying. I don't want to buy a new computer yet, but I will need to find a solution soon. I have just converted my home server, a Lenovo ThinkPad, into my everyday laptop, as my Dell Inspiron is unreliable when starting up. I did a fresh Linux Mint install on the ThinkPad and installed all the tools I need for my hobby project development and video editing. I don't know if I will use the same system now for Plex and back up my phone photos. I may have to go back to my old Raspberry Pi setup. I still have my Raspberry Pis, which I can revive again. I will think about it before making everything so complicated that it's hard to maintain. </p>
+<p>I had nothing else to write today, but I wanted to test if my build system for this journal is working on my ThinkPad with the fresh installation, hence this late-night rant.</p>]]></description>
+  </item>
   <item>
     <title>2026-01-02 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2026.html#2026-01-02</link>

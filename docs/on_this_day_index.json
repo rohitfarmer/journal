@@ -259,6 +259,14 @@
       "html": "<article id=\"2025-04-03\" class=\"entry\">\n  <header class=\"entry-header\">\n    <h2 class=\"entry-date\">\n      <time datetime=\"2025-04-03\">2025-04-03</time>\n    </h2>\n      <a class=\"entry-permalink\"\n        href=\"2025.html#2025-04-03\"\n        title=\"Copy link to this entry\"\n        aria-label=\"Copy link to this entry\">\n        🔗\n      </a>\n    \n  </header>\n  <div class=\"entry-body\">\n    <p>After a long hiatus, I have resumed listening to audiobooks in my car since I started commuting to work daily. The best part is that I borrow audiobooks from my local Montgomery County, Maryland library. In the past three weeks, I finished listening to Analog Church/Christian by Jay Y. Kim and am now listening to The Revenge of Analog by David Sax. Public libraries in the USA are a blessing and a massive resource that few people tap into.</p>\n  </div>\n</article>\n"
     }
   ],
+  "01-03": [
+    {
+      "date": "2026-01-03",
+      "year": "2026",
+      "url": "2026.html#2026-01-03",
+      "html": "<article id=\"2026-01-03\" class=\"entry\">\n  <header class=\"entry-header\">\n    <h2 class=\"entry-date\">\n      <time datetime=\"2026-01-03\">2026-01-03</time>\n    </h2>\n      <a class=\"entry-permalink\"\n        href=\"2026.html#2026-01-03\"\n        title=\"Copy link to this entry\"\n        aria-label=\"Copy link to this entry\">\n        🔗\n      </a>\n    <ul class=\"entry-tags\"><li><a href=\"tag/computer.html\" class=\"entry-tag\">computer</a></li></ul>\n  </header>\n  <div class=\"entry-body\">\n    <p>I am having home computer issues. All my home laptops are old now, and one by one, they're dying. I don't want to buy a new computer yet, but I will need to find a solution soon. I have just converted my home server, a Lenovo ThinkPad, into my everyday laptop, as my Dell Inspiron is unreliable when starting up. I did a fresh Linux Mint install on the ThinkPad and installed all the tools I need for my hobby project development and video editing. I don't know if I will use the same system now for Plex and back up my phone photos. I may have to go back to my old Raspberry Pi setup. I still have my Raspberry Pis, which I can revive again. I will think about it before making everything so complicated that it's hard to maintain. </p>\n<p>I had nothing else to write today, but I wanted to test if my build system for this journal is working on my ThinkPad with the fresh installation, hence this late-night rant.</p>\n  </div>\n</article>\n"
+    }
+  ],
   "01-02": [
     {
       "date": "2026-01-02",
