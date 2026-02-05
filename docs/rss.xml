@@ -4,7 +4,24 @@
   <title>Rohit's Journal – 2026</title>
   <link>journal.rohitfarmer.com/2026.html</link>
   <description>Welcome to my online journal. The entries here are longer than a tweet, but less structured than a blog post. You can also follow my journal via <a href="https://journal.rohitfarmer.com/rss.xml">RSS</a>. Email for comments: rohit@rohitfarmer.com</description>
-  <lastBuildDate>Mon, 26 Jan 2026 19:27:55 -0000</lastBuildDate>
+  <lastBuildDate>Thu, 05 Feb 2026 21:43:36 -0000</lastBuildDate>
+  <item>
+    <title>2026-02-05 – Rohit's Journal</title>
+    <link>journal.rohitfarmer.com/2026.html#2026-02-05</link>
+    <guid>journal.rohitfarmer.com/2026.html#2026-02-05</guid>
+    <pubDate>Thu, 05 Feb 2026 05:00:00 -0000</pubDate>
+    <description><![CDATA[<ul>
+<li>
+<p>February has begun, and I had no time to write in my journal. A lot happened, though, in the first two weeks. We had a big snow/ice storm that dumped a lot of snow and ice across Maryland and probably most of the Northeast coast. It's still there, and it will stick around for another week or so before the temperature rises enough to start melting it. </p>
+</li>
+<li>
+<p>Today, I changed the way I was serving my website. I am still compiling the website on my local machines, but instead of rsyncing directly from my local machine, the rendered website is being pulled from GitHub on the server. I had to do it because I lost SSH connectivity, which was required to push the rendered website to my server. I still don't know the reason, but that's what happened. The system is still okay; a cron job on my server pulls any new changes every 5 minutes. I will have to wait and see if it costs me any more than what I am already paying. </p>
+</li>
+<li>
+<p>I have also published a book of my postcard collection. It was already online, but I have now removed the restriction on search engines' indexing it. I also updated the license to make it more permissive. I still have to add quite a few postcards to it, but I don't have the time. Here you can see my book <a href="https://cardsandstories.rohitfarmer.com/">https://cardsandstories.rohitfarmer.com/</a></p>
+</li>
+</ul>]]></description>
+  </item>
   <item>
     <title>2026-01-26 – Rohit's Journal</title>
     <link>journal.rohitfarmer.com/2026.html#2026-01-26</link>

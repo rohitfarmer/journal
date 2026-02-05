@@ -259,6 +259,14 @@
       "html": "<article id=\"2025-04-03\" class=\"entry\">\n  <header class=\"entry-header\">\n    <h2 class=\"entry-date\">\n      <time datetime=\"2025-04-03\">2025-04-03</time>\n    </h2>\n      <a class=\"entry-permalink\"\n        href=\"2025.html#2025-04-03\"\n        title=\"Copy link to this entry\"\n        aria-label=\"Copy link to this entry\">\n        🔗\n      </a>\n    \n  </header>\n  <div class=\"entry-body\">\n    <p>After a long hiatus, I have resumed listening to audiobooks in my car since I started commuting to work daily. The best part is that I borrow audiobooks from my local Montgomery County, Maryland library. In the past three weeks, I finished listening to Analog Church/Christian by Jay Y. Kim and am now listening to The Revenge of Analog by David Sax. Public libraries in the USA are a blessing and a massive resource that few people tap into.</p>\n  </div>\n</article>\n"
     }
   ],
+  "02-05": [
+    {
+      "date": "2026-02-05",
+      "year": "2026",
+      "url": "2026.html#2026-02-05",
+      "html": "<article id=\"2026-02-05\" class=\"entry\">\n  <header class=\"entry-header\">\n    <h2 class=\"entry-date\">\n      <time datetime=\"2026-02-05\">2026-02-05</time>\n    </h2>\n      <a class=\"entry-permalink\"\n        href=\"2026.html#2026-02-05\"\n        title=\"Copy link to this entry\"\n        aria-label=\"Copy link to this entry\">\n        🔗\n      </a>\n    \n  </header>\n  <div class=\"entry-body\">\n    <ul>\n<li>\n<p>February has begun, and I had no time to write in my journal. A lot happened, though, in the first two weeks. We had a big snow/ice storm that dumped a lot of snow and ice across Maryland and probably most of the Northeast coast. It's still there, and it will stick around for another week or so before the temperature rises enough to start melting it. </p>\n</li>\n<li>\n<p>Today, I changed the way I was serving my website. I am still compiling the website on my local machines, but instead of rsyncing directly from my local machine, the rendered website is being pulled from GitHub on the server. I had to do it because I lost SSH connectivity, which was required to push the rendered website to my server. I still don't know the reason, but that's what happened. The system is still okay; a cron job on my server pulls any new changes every 5 minutes. I will have to wait and see if it costs me any more than what I am already paying. </p>\n</li>\n<li>\n<p>I have also published a book of my postcard collection. It was already online, but I have now removed the restriction on search engines' indexing it. I also updated the license to make it more permissive. I still have to add quite a few postcards to it, but I don't have the time. Here you can see my book <a href=\"https://cardsandstories.rohitfarmer.com/\">https://cardsandstories.rohitfarmer.com/</a></p>\n</li>\n</ul>\n  </div>\n</article>\n"
+    }
+  ],
   "01-26": [
     {
       "date": "2026-01-26",
